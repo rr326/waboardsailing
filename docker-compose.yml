@@ -1,0 +1,33 @@
+# https://hub.docker.com/_/mediawiki
+#
+# MediaWiki with MariaDB
+#
+# Access via "http://localhost:8081"
+#   (or "http://$(docker-machine ip):8081" if using docker-machine)
+version: '3'
+services:
+  mediawiki:
+    image: mediawiki
+    restart: always
+    ports:
+      - 8081:80
+    links:
+      - database
+    volumes:
+      - images:/var/www/html/images
+      - ./LocalSettings.php:/var/www/html/LocalSettings.php
+  # This key also defines the name of the database host used during setup instead of the default "localhost"
+  database:
+    image: mariadb
+    restart: always
+    environment:
+      # @see https://phabricator.wikimedia.org ./source/mediawiki/browse/master/includes/DefaultSettings.php
+      MYSQL_DATABASE: nwwindtalk_wiki
+      MYSQL_USER: wikiuser
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  images:
+  db:
