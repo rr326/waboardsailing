@@ -1,0 +1,9 @@
+# https://docs.gitguardian.com/ggshield-docs/integrations/git-hooks/pre-commit
+
+repos:
+  - repo: https://github.com/gitguardian/ggshield
+    rev: v1.14.4
+    hooks:
+      - id: ggshield
+        language_version: python3
+        stages: [commit]
