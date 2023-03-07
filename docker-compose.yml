@@ -16,6 +16,8 @@ services:
     volumes:
       - images:/var/www/html/images
       - ./LocalSettings.php:/var/www/html/LocalSettings.php
+      - ./secrets.php:/var/www/html/secrets.php
+
   # This key also defines the name of the database host used during setup instead of the default "localhost"
   database:
     image: mariadb
@@ -27,6 +29,14 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - db:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8082:80
+    environment:
+      - PMA_ARBITRARY=1
 
 volumes:
   images:
