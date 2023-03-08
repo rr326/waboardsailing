@@ -4,9 +4,9 @@
 #
 # Access via "http://localhost:8081"
 #   (or "http://$(docker-machine ip):8081" if using docker-machine)
-version: '3'
 services:
   mediawiki:
+    container_name: mediawiki
     image: mediawiki
     restart: always
     ports:
@@ -15,11 +15,12 @@ services:
       - database
     volumes:
       - images:/var/www/html/images
-      - ./LocalSettings.php:/var/www/html/LocalSettings.php
-      - ./secrets.php:/var/www/html/secrets.php
+      - ../mediawiki/LocalSettings.php:/var/www/html/LocalSettings.php
+      - ../mediawiki/secrets.php:/var/www/html/secrets.php
 
   # This key also defines the name of the database host used during setup instead of the default "localhost"
   database:
+    container_name: database
     image: mariadb
     restart: always
     environment:
@@ -28,11 +29,14 @@ services:
       MYSQL_USER: wikiuser
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
-      - db:/var/lib/mysql
+      - ./db_data:/var/lib/mysql
 
   phpmyadmin:
+    container_name: phpmyadmin
     image: phpmyadmin
     restart: always
+    depends_on: 
+      - database
     ports:
       - 8082:80
     environment:

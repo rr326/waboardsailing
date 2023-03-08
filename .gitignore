@@ -1,3 +1,4 @@
-.env
-secrets.php
+**/.env
+**/secrets.php
 .cache_ggshield
+docker/db_data
