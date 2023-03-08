@@ -153,3 +153,4 @@ wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'Bootstrap' );
 wfLoadSkin( 'chameleon' );
 $wgDefaultSkin='chameleon';
+$egChameleonLayoutFile= __DIR__ . '/skins/chameleon/layouts/clean.xml';
