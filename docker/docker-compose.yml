@@ -7,7 +7,7 @@
 services:
   mediawiki:
     container_name: mediawiki
-    image: mediawiki
+    build: ./mediawiki_mod
     restart: always
     ports:
       - 8081:80
