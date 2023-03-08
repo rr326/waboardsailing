@@ -126,7 +126,7 @@ $wgGroupPermissions['*']['edit'] = false;
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, e.g. 'vector' or 'monobook':
-$wgDefaultSkin = "vector";
+# $wgDefaultSkin = "vector";
 
 # Enabled skins.
 # The following skins were automatically enabled:
@@ -149,3 +149,7 @@ wfLoadExtension( 'WikiEditor' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
+# Chameleon skin: https://github.com/ProfessionalWiki/chameleon/blob/master/docs/installation.md
+wfLoadExtension( 'Bootstrap' );
+wfLoadSkin( 'chameleon' );
+$wgDefaultSkin='chameleon';
