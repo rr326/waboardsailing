@@ -17,6 +17,7 @@ services:
       - images:/var/www/html/images
       - ../mediawiki/LocalSettings.php:/var/www/html/LocalSettings.php
       - ../mediawiki/secrets.php:/var/www/html/secrets.php
+      - ../mediawiki/customizations:/var/www/html/customizations
 
   # This key also defines the name of the database host used during setup instead of the default "localhost"
   database:

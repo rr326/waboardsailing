@@ -150,7 +150,9 @@ wfLoadExtension( 'WikiEditor' );
 # Add more configuration options below.
 
 # Chameleon skin: https://github.com/ProfessionalWiki/chameleon/blob/master/docs/installation.md
+# https://github.com/ProfessionalWiki/chameleon/blob/master/docs/customization.md
 wfLoadExtension( 'Bootstrap' );
 wfLoadSkin( 'chameleon' );
 $wgDefaultSkin='chameleon';
-$egChameleonLayoutFile= __DIR__ . '/skins/chameleon/layouts/clean.xml';
+$egChameleonLayoutFile= __DIR__ . '/customizations/customtheme.xml';
+$wgShowExceptionDetails = true;
