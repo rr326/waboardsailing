@@ -21,6 +21,18 @@ RUN COMPOSER_ALLOW_SUPERUSER=1 composer require --no-update mediawiki/chameleon-
 RUN COMPOSER_ALLOW_SUPERUSER=1 composer update
 RUN COMPOSER_ALLOW_SUPERUSER=1 composer update mediawiki/chameleon-skin --no-dev -o
 
+# Widgets: https://www.mediawiki.org/wiki/Extension:Widgets
+# TODO - Delete??
+RUN git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Widgets.git /var/www/html/extensions/Widgets
+RUN chown -R www-data:www-data /var/www/html/extensions/Widgets
+RUN COMPOSER_ALLOW_SUPERUSER=1 composer update --no-dev
+
+# iFramePage
+# Odd - piping from curl to tar isn't working
+RUN curl https://extdist.wmflabs.org/dist/extensions/IframePage-REL1_39-f333755.tar.gz > /var/www/html/extensions/tmp.txt
+RUN cat /var/www/html/extensions/tmp.txt | tar -xzf -C /var/www/html/extensions
+RUN rm /var/www/html/extensions/tmp.txt
+
 
 # Taken from mediawiki Dockerfile
 # https://github.com/wikimedia/mediawiki-docker/blob/aa07f326d2719366125551213a2a9be8801aa773/1.39/apache/Dockerfile

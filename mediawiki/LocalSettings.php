@@ -156,3 +156,20 @@ wfLoadSkin( 'chameleon' );
 $wgDefaultSkin='chameleon';
 $egChameleonLayoutFile= __DIR__ . '/customizations/customtheme.xml';
 $wgShowExceptionDetails = true;
+
+# TODO: Delete?
+# https://www.mediawiki.org/wiki/Extension:Widgets
+wfLoadExtension( 'Widgets' ); 
+
+# iFramePage
+# https://www.mediawiki.org/wiki/Extension:IframePage
+// require_once "$IP/extensions/IframePage/SpecialIframePage.php";
+wfLoadExtension('IframePage');
+$wgIframePageSrc= array( 
+	'GoogleMaps' => 'https://www.google.com/maps/',
+	'MainMap' => 'https://www.google.com/maps/d/u/0/embed?mid=1zF6jmAEuTNwGlDCY3XlijlyzT-6T-D8&ehbc=2E312F'
+);
+$wgIframePageAllowPath = true;
+
+# https://www.mediawiki.org/wiki/Manual:$wgRawHtml
+$wgRawHtml = true;
