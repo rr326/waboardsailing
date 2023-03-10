@@ -1,4 +1,4 @@
-# PHP Composer
+# Devnotes
 
-* PHP Composer -  Install this: https://getcomposer.org/doc/00-intro.md
-* Chamelion skin
+Switching to Pelican version, after trying, and not liking
+a docker version. (See branch 'docker').
