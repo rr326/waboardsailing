@@ -72,7 +72,7 @@ publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
 s3_upload: publish
-	aws s3 sync "$(OUTPUTDIR)"/ s3://$(S3_BUCKET) --acl public-read --delete
+	aws s3 sync "$(OUTPUTDIR)"/ s3://$(S3_BUCKET)  --delete
 
 
 .PHONY: html help clean regenerate serve serve-global devserver publish s3_upload

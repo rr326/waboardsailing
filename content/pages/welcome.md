@@ -1,4 +1,4 @@
-Title: Home
+Title: Welcome
 
 Welcome to NW WindTalk[edit | edit source]
 NW Windtalk shares information about windsurfing and winging in the Pacific Northwest.
