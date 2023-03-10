@@ -31,5 +31,12 @@ THEME = "theme"
 
 LIVERELOAD = True
 
+# Disable page creation of pages I don't care about
+ARCHIVES_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
+CATEGORIES_SAVE_AS = ''
+TAGS_SAVE_AS = ''
+
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
