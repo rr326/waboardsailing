@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
         <title>NW Wind Talk</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.ico">
 
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
 
@@ -21,7 +22,7 @@
 
 </head>
 
-<body id="index" class="home">
+<body id="index" class="home" {% block body_attributes %}{% endblock body_attributes %} >
   <div class="container-fluid">
     <div class="mx-4">      
       <header>
