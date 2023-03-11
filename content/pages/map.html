@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Map</title>
+  </head>
+  <body>
+    <!-- https://stackoverflow.com/a/15668970 -->
+    <style>
+      .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+      }
+      .iframe-container > * {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+      }
+    </style>
+
+    <div class="iframe-container">
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1zF6jmAEuTNwGlDCY3XlijlyzT-6T-D8&ehbc=2E312F&zoom=9&center=48.509,-121.511253"
+        width="640"
+        height="480"
+      ></iframe>
+    </div>
+  </body>
+</html>
