@@ -74,11 +74,12 @@ devserver-global:
 publish:
 	pelican "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
-s3_upload: publish
+upload: publish
 	aws s3 sync "$(OUTPUTDIR)"/ s3://$(S3_BUCKET)  --delete
 
 install:
 	pip install pelican
-	pip install -p 35729 --wait 3
+	pip install pelican-jinja2content
+	pip install livereload
 
 .PHONY: html help clean regenerate serve serve-global devserver publish s3_upload install
