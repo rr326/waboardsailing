@@ -1,5 +1,5 @@
 AUTHOR = 'rrosen326@gmail.com'
-SITENAME = 'NW Windtalk'
+SITENAME = 'WA Boardsailors'
 SITEURL = ''
 
 PATH = 'content'

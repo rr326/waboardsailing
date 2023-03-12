@@ -8,7 +8,7 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-S3_BUCKET=nwwindtalk.k2company.com
+S3_BUCKET=waboardsailors.org
 
 
 DEBUG ?= 0
