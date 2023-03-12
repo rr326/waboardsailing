@@ -37,6 +37,7 @@ AUTHORS_SAVE_AS = ''
 CATEGORIES_SAVE_AS = ''
 TAGS_SAVE_AS = ''
 
+PAGE_PATHS = ['pages']
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
