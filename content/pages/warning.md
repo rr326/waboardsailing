@@ -1,6 +1,6 @@
-Title: Warnings & Disclaimer
+Title: Warning
 
-# Warnings & Disclaimer[edit | edit source]
+# Warnings & Disclaimer
 Finally, windsurfing is dangerous. You can die. Seriously. While we strive to be as accurate, we are just imperfect volunteers. Use at your own risk.
 
 Windsurfing in Washington can be especially dangerous since the water can be COLD. In many of the popular sites the wind can cut off completely or go from on-shore (ie: pushes you home) to off-shore (ie: pushes you away from home). That is obviously bad.
