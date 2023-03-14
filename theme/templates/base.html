@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     {% block head %}
     <meta charset="utf-8" />
@@ -36,7 +36,7 @@
 
   <body
     id="index"
-    class="home"
+    class="d-flex flex-column h-100 mx-4"
     {%
     block
     body_attributes
@@ -45,18 +45,20 @@
     body_attributes
     %}
   >
-    <div class="container-fluid">
-      <div class="mx-4">
+    <main class="flex-shrink-0">
+      <div class="container-fluid">
         <header>{% include 'navbar.html' %}</header>
 
         <div class="mt-2">
           {% block content %} {% endblock %}
           <section id="extras"></section>
         </div>
-
-        <footer>{% include 'footer.html' %}</footer>
       </div>
-    </div>
+    </main>
+
+    <footer class="mt-auto">
+      {% include 'footer.html' %}
+    </footer>
 
     {% include 'analytics.html' %}
     <script
