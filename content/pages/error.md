@@ -6,4 +6,3 @@ save_as: error.html
 Can not find page. But don't give up!
 
 ![Wipeout](../images/windsurfwipeout.jpg)
-

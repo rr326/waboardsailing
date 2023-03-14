@@ -66,7 +66,7 @@ devserver:
 	@clear
 	( [[ `pgrep -f livereload` ]] || livereload "$(OUTPUTDIR)" > tmp/log_livereload.log &)
 	@echo "#### LIVERELOAD RUNNING ####"
-	pelican -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+	pelican -lr --debug "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 devserver-global:
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -b 0.0.0.0

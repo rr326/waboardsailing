@@ -1,0 +1,15 @@
+{% extends "page.html" %}
+
+{% block content %}
+<section id="content" class="body">
+    <table class="table">
+        <thead>    
+        </thead>
+        <tbody>
+            <th>Parking</th>
+            <td>{{page.lat_lon}}</td>
+        </tbody>
+    </table>
+    {{ page.content }}
+</section>
+{% endblock %}
