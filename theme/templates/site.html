@@ -2,14 +2,54 @@
 
 {% block content %}
 <section id="content">
-    <table class="table">
-        <thead>    
-        </thead>
-        <tbody>
-            <th>Parking</th>
-            <td>{{page.lat_lon}}</td>
-        </tbody>
-    </table>
+    <div class="border border-4 border-dark mb-3">
+        <table class="table table-sm">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Location</th>
+                    <td><a href="https://www.google.com/maps/place/{{page.lat_lon}}/@{{page.lat_lon}}" target="_blank">{{page.lat_lon}}</a></td>
+                </tr>
+                <tr>
+                    <th>Region</th>
+                    <td>{{page.region}}</td>
+                </tr>
+                <tr>
+                    <th>Easiest Level</th>
+                    <td>{{page.level}}</td>
+                </tr>
+                <tr>
+                    <th>Best Wind</th>
+                    <td>{{page.best_wind}}</td>
+                </tr>
+                <tr>
+                    <th>Fee</th>
+                    <td>{{page.fee}}</td>
+                </tr>
+                <tr>
+                    <th>Parking</th>
+                    <td>{{page.parking}}</td>
+                </tr>
+                <tr>
+                    <th>Launch</th>
+                    <td>{{page.launch}}</td>
+                </tr>
+                <tr>
+                    <th>Forecast</th>
+                    <td>{{page.forecast}}</td>
+                </tr>
+                <tr>
+                    <th>Webcam</th>
+                    <td>{{page.webcam}}</td>
+                </tr>
+                <tr>
+                    <th>Author</th>
+                    <td><a href="mailto:{{page.author_email}}">{{page.author}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     {{ page.content }}
 </section>
 {% endblock %}

@@ -2,7 +2,8 @@ template: site
 Title: Mags
 URL:
 save_as: pages/sites/mags.html
-lat_lon: 47.6752745,-122.2543215
+lat_lon: 47.675585, -122.251607
+region: Lake Washington
 best_wind: SE, S, SE (side offshore)
 level: intermediate
 fee: Free
