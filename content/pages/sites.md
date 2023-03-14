@@ -3,7 +3,7 @@ Title: Sites
 # Sites / Launches 
 *Link: [Full Sized Map](/pages/map.html)*
 
-<div style="float: right;">
+<div style="float: right; width: 100%;" >
     <iframe
     src="https://www.google.com/maps/d/u/0/embed?mid=1zF6jmAEuTNwGlDCY3XlijlyzT-6T-D8&ehbc=2E312F&z=7&ll=47.8157,-121.5564"
     width="640"
