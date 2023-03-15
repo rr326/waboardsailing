@@ -66,6 +66,8 @@ devserver:
 	@clear
 	( [[ `pgrep -f livereload` ]] || livereload "$(OUTPUTDIR)" > tmp/log_livereload.log &)
 	@echo "#### LIVERELOAD RUNNING ####"
+	@printf "\n\n**** WARNING ****\n"
+	@printf "If this crashes, run 'make debug' for a full stack trace.\n********************\n\n"
 	pelican -lr --debug "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 devserver-global:
@@ -81,5 +83,9 @@ install:
 	pip install pelican
 	pip install pelican-jinja2content
 	pip install livereload
+
+debug:
+	# Note - it is the -l that conflics with --debug preventing a full stack trace
+	pelican --debug "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 .PHONY: html help clean regenerate serve serve-global devserver publish s3_upload install
