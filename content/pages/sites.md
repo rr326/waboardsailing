@@ -11,6 +11,10 @@ Title: Sites
     ></iframe>
 </div>
 
+## Where should I sail? (aka Forecasting)
+
+See our [forecasting page](/pages/forecast.html).
+
 ## Lake Washington
 
 * [Magnusson Park (mags)](/pages/sites/mags.html)
