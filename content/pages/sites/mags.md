@@ -12,10 +12,10 @@ launch: Open grassy area followed by a small drop and rocky beach. Wind shadow w
 forecast: (see below)
 webcam: (none)
 author: Ross Rosen
+author_email: cab_mall0n@icloud.com
 
 # Magnusson Park
-
-#### aka: mags, maggie
+*(aka: Mags, Maggie )*
 
 ## Overview
 
