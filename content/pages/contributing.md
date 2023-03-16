@@ -2,12 +2,12 @@ Title: Contributing
 
 # Contributing
 
-Are you an experience WA sailor? If so, this website needs _your_ help.
+Are you an experienced WA sailor? If so, this website needs _your_ help.
 
 If a lot of people contribute a little effort, we can create a great resource
 for people getting started boardsailing in WA.
 
-I (the website builder - <a href="mailto:cab_mall0n@icloud.com" >Ross Rosen</a>)
+I (<a href="mailto:cab_mall0n@icloud.com" >Ross Rosen</a>)
 can put the site together, but I do not have the expertise to build the content.
 That's where the community steps in.
 
@@ -28,12 +28,14 @@ This site is written in a modified version of ["Markdown"](https://www.markdowng
 It would be much easier for me if all contributors would spend a little time and learn Markdown.
 But you don't have to. If you send me a plain text file, I will manually import it into Markdown.
 
+[Dillinger](https://dillinger.io) is apparently a good WYSIWYG Markdown editor you can use. Note - it will NOT be able to process the meta data and create the table at the top of the site page. You'll just have to wait til I publish it for that.
+
 If you are a developer you are welcome to submit PRs: [github](https://github.com/rr326/waboardsailing).
 
 ## How To
 
 This website uses a website builder call [Pelican](https://getpelican.com). It uses
-Markdown, with some "meta data" at the top, and with a custom theme that I built.
+Markdown, with some "metadata" at the top, and with a custom theme that I built.
 Below is an example of the Markdown for the Magnusson page.
 
 

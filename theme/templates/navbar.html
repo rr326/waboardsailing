@@ -57,22 +57,22 @@
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Newbies
-        </a>
-        <ul class="dropdown-menu"></ul>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
           Resources
         </a>
-        <ul class="dropdown-menu"></ul>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="/pages/resources.html">Overview</a>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          {% for page in pages %} {% if page.relative_source_path[5:16] ==
+          '/resources/' %}
+          <li>
+            <a class="dropdown-item" href="{{page.relative_source_path[6:]|replace('.md', '.html')}}"
+              >{{page.title}}</a
+            >
+          </li>
+          {% endif %} {% endfor %}
+        </ul>
       </li>
     </ul>
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
