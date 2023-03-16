@@ -8,7 +8,7 @@ If a lot of people contribute a little effort, we can create a great resource
 for people getting started boardsailing in WA.
 
 I (the website builder - <a href="mailto:cab_mall0n@icloud.com" >Ross Rosen</a>)
-can put the site together, but I do not have the expertise to build the content. 
+can put the site together, but I do not have the expertise to build the content.
 That's where the community steps in.
 
 I'd like to have different people "own" different pages. For instance, someone
@@ -28,11 +28,14 @@ This site is written in a modified version of ["Markdown"](https://www.markdowng
 It would be much easier for me if all contributors would spend a little time and learn Markdown.
 But you don't have to. If you send me a plain text file, I will manually import it into Markdown.
 
+If you are a developer you are welcome to submit PRs: [github](https://github.com/rr326/waboardsailing).
+
 ## How To
 
 This website uses a website builder call [Pelican](https://getpelican.com). It uses
-Markdown, with some "meta data" at the top, and with a custom theme that I built. 
+Markdown, with some "meta data" at the top, and with a custom theme that I built.
 Below is an example of the Markdown for the Magnusson page.
+
 
 ```
 template: site
@@ -46,8 +49,8 @@ level: intermediate
 fee: Free
 parking: Ample
 launch: Open grassy area followed by a small drop and rocky beach. Wind shadow when wind is westerly.
-forecast: (see below)
-webcam: (none)
+forecast: <a href="https://wx.ikitesurf.com/spot/116695" target="_blank">iWindsurf</a>
+webcam: 
 author: Ross Rosen
 author_email: cab_mall0n@icloud.com
 
@@ -74,3 +77,27 @@ TBD
 TBD
 
 ```
+
+### Metadata
+
+Unfortunately, this stuff is a bit picky, so do your best but don't sweat
+it.
+
+* `template` 
+    * If a launch, set as `site`
+    * Otherwise, **DELETE THE WHOLE LINE**
+* `URL` - Leave blank
+* `Title` - This determines the page name
+* `save_as`
+    * If a launch, set as `pages/sites/name.html`
+    * Otherwise, **DELETE THE WHOLE LINE**
+* `lat_lon`
+    * Copy this from Google Maps. Point to the parking lot
+    * The computer will automatically create a Google Map link.
+* `forecast` and `webcam` 
+    * If you are technical, you can insert html links to the best
+      forecast pages. Like this: 
+      `<a href="https://wx.ikitesurf.com/spot/116695" target="_blank">iWindsurf</a>` 
+    * If you are not, just paste the links and I'll deal with it.
+* `author_email` - I used my mac to create a 'hide my email' email address, just 
+    in case it gets picked up by spam bots. 
