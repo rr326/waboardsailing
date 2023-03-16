@@ -1,6 +1,6 @@
 template: site
-Title: Mags
 URL:
+Title: Mags
 save_as: pages/sites/mags.html
 lat_lon: 47.675585, -122.251607
 region: Lake Washington
@@ -42,10 +42,10 @@ TBD
 
 
 
-## Advanced topics
+## Advanced Topics
 
 TBD
 
-## NW-Windtalk threads
+## NW-Windtalk Threads
 
 TBD

@@ -35,10 +35,10 @@ TBD
 
 
 
-## Advanced topics
+## Advanced Topics
 
 TBD
 
-## NW-Windtalk threads
+## NW-Windtalk Threads
 
 TBD
