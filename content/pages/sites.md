@@ -11,9 +11,9 @@ Title: Sites
     ></iframe>
 </div>
 
-## Where should I sail? (aka Forecasting)
+## Forecasting
 
-See our [forecasting page](/pages/forecast.html).
+See our [forecast page](/pages/forecast.html).
 
 ## Lake Washington
 
