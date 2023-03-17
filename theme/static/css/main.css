@@ -3,7 +3,10 @@
     --bs-body-font-family: var(--bs-font-sans-serif);
 }
 
-/* --bs-font-sans-serif: 
-'Montserrat', sans-serif, Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji",system-ui,-apple-system,"Segoe UI",; 
-, Roboto,"Helvetica Neue", sans-serif,;
-*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+.display-1, .display-2, .display-3, .display-4, .display-6, .display-6, nav {
+    font-family: Raleway, Montserrat, Roboto,"Helvetica Neue", sans-serif;
+} 
