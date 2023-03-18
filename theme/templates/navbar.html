@@ -46,7 +46,7 @@
           {% for page in pages %} {% if page.relative_source_path[5:12] ==
           '/sites/' %}
           <li>
-            <a class="dropdown-item" href="{{page.relative_source_path[6:]|replace('.md', '.html')}}"
+            <a class="dropdown-item" href="/pages/{{page.relative_source_path[6:]|replace('.md', '.html')}}"
               >{{page.title}}</a
             >
           </li>
