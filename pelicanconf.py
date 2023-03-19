@@ -42,10 +42,10 @@ PAGE_PATHS = ['pages']
 # PAGE_URL = '{all_but_index}'
 # PAGE_SAVE_AS = '{all_but_index}index.html'
 # PATH_METADATA = r"^pages(?P<all_but_index>((?=/index)(/))|((?=.+/index\..*)(.*)(?=/index\.))|((?!.*/index\.)(.*)(?=\.))).*$"
+
+PLUGINS=["pelican-page-hierarchy"]
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 SLUGIFY_SOURCE = 'basename'
 
 
-PLUGIN_PATHS=["plugins"]
-PLUGINS=["pelican-page-hierarchy"]

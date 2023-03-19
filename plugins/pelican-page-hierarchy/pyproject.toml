@@ -1,0 +1,19 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "pelican-page-hierarchy"
+version = "0.1.0"
+authors = ["Ahmad Khayyat <akhayyat@gmail.com>"]
+description = "A Pelican plugin that creates a URL hierarchy for pages that matches the filesystem hierarchy of their sources"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+packages = [
+    { include = "pelican" },
+]
+"repository" = "https://github.com/akhayyat/pelican-page-hierarchy"
