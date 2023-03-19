@@ -1,7 +1,5 @@
 template: site
 Title: Sail Sand Point
-URL:
-save_as: pages/sites/ssp.html
 lat_lon:47.688868, -122.264970
 region: Lake Washington
 best_wind: N, NE

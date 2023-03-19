@@ -1,7 +1,5 @@
 template: site
 Title: Mags
-URL:
-save_as: pages/sites/mags.html
 lat_lon: 47.675585, -122.251607
 region: Lake Washington
 best_wind: SE, S, SE (side offshore)
