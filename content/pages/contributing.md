@@ -41,9 +41,7 @@ Below is an example of the Markdown for the Magnusson page.
 
 ```
 template: site
-URL:
 Title: Mags
-save_as: pages/sites/mags.html
 lat_lon: 47.675585, -122.251607
 region: Lake Washington
 best_wind: SE, S, SE (side offshore)
@@ -88,10 +86,7 @@ it.
 * `template` 
     * If a launch, set as `site`
     * Otherwise, **DELETE THE WHOLE LINE**
-* `URL` - Leave blank
 * `Title` - This determines the page name
-* `save_as`
-    * If a launch, set as `pages/sites/name.html`
     * Otherwise, **DELETE THE WHOLE LINE**
 * `lat_lon`
     * Copy this from Google Maps. Point to the parking lot

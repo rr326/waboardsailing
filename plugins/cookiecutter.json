@@ -1,0 +1,21 @@
+{
+    "cookiecutter": {
+        "_output_dir": "/Users/rrosen/dev/nwwindtalk/plugins",
+        "_template": "gh:getpelican/cookiecutter-pelican-plugin",
+        "authors": "Ahmad Khayyat<akhayyat@gmail.com>",
+        "contributing": "CONTRIBUTING.md",
+        "description": "A Pelican plugin that creates a URL hierarchy for pages that matches the filesystem hierarchy of their sources.",
+        "dev_status": "3 - Alpha",
+        "distribution_name": "pelican-pelican-page-hierarchy",
+        "keywords": "\"pelican\", \"plugin\"",
+        "license": "AGPL-3.0",
+        "package_name": "pelican_page_hierarchy",
+        "pelican_version": ">=4.5",
+        "plugin_name": "pelican-page-hierarchy",
+        "python_version": ">=3.7,<4.0",
+        "readme": "README.md",
+        "repo_name": "pelican-page-hierarchy",
+        "repo_url": "https://github.com/akhayyat/pelican-page-hierarchy",
+        "version": "0.1.0"
+    }
+}
