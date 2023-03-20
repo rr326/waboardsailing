@@ -82,18 +82,14 @@ upload: publish
 install:
 	pip install pelican	
 	pip install livereload
-	pip install git+https://github.com/rr326/pelican-cleanurls.git
+	pip install git+https://github.com/rr326/pelican-cleanurl.git
 	
 
 debug:
 	# Note - it is the -l that conflics with --debug preventing a full stack trace
 	pelican --debug "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
-submodule_add:
-	git submodule add https://github.com/rr326/pelican-cleanurls.git plugins/pelican-cleanurls
+upgrade:
+	pip install -U git+https://github.com/rr326/pelican-cleanurl.git	
 
-submodle_init:
-	git submodule init
-	git submodule update
-
-.PHONY: html help clean regenerate serve serve-global devserver publish s3_upload install
+.PHONY: html help clean regenerate serve serve-global devserver publish s3_upload install debug upgrade
