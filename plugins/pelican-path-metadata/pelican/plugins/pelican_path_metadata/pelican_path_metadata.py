@@ -88,7 +88,7 @@ def transform_path(
         parts[-1] = Path(parts[-1]).stem
 
         clean_path = os.path.join(*parts)
-        cleanurl = clean_path + "/"
+        cleanurl = clean_path
         cleanurl_saveas = os.path.join(clean_path, "index.html")
 
     return cleanurl, cleanurl_saveas

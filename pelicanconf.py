@@ -40,12 +40,11 @@ TAGS_SAVE_AS = ''
 STATIC_PATHS = ['images']
 ARTICLE_PATHS = ['articles']
 PAGE_PATHS = ['pages']
-# PAGE_URL = '{all_but_index}'
-# PAGE_SAVE_AS = '{all_but_index}index.html'
-# PATH_METADATA = r"^pages(?P<all_but_index>((?=/index)(/))|((?=.+/index\..*)(.*)(?=/index\.))|((?!.*/index\.)(.*)(?=\.))).*$"
+
 
 PLUGINS=["pelican_path_metadata"]
 STATIC_URL = '{path}'
 STATIC_SAVE_AS = '{path}'
 PAGE_URL = '{cleanurl}'
 PAGE_SAVE_AS = '{cleanurl_saveas}'
+INDEX_SAVE_AS = ''

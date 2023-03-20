@@ -1,9 +1,15 @@
 {% extends "page.html" %}
 
 {% block content %}
-<ul>
-    {% for page in pages %}
-    <li>{{page.title}}: <a href="/{{page.url}}">{{page.url}}</a> -- {{page.slug}}</li>
+{% set urls = pages| map('attr', 'url')  | sort %}
+    <h1>Sitemap</h1>
+    {% for url in urls %}
+        <p>
+            {% set slash_count = url | replace('/',' ') | replace('.','') | wordcount %}
+            {% for i in range(slash_count) %}
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            {% endfor %}
+            <a href="/{{url}}">/{{url}}</a>
+        </p>
     {% endfor %}
-</ul>
 {% endblock %}

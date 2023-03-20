@@ -1,0 +1,2 @@
+Title: Sitemap
+template: all
