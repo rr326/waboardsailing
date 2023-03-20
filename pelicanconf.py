@@ -42,7 +42,7 @@ ARTICLE_PATHS = ['articles']
 PAGE_PATHS = ['pages']
 
 
-PLUGINS=["pelican_path_metadata"]
+PLUGINS=['pelican_cleanurl']
 STATIC_URL = '{path}'
 STATIC_SAVE_AS = '{path}'
 PAGE_URL = '{cleanurl}'

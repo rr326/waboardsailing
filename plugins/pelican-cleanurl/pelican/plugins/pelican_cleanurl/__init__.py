@@ -1,1 +1,1 @@
-from .pelican_path_metadata import *  # NOQA
+from .pelican_cleanurl import *  # NOQA

@@ -80,23 +80,20 @@ upload: publish
 	aws s3 sync "$(OUTPUTDIR)"/ s3://$(S3_BUCKET)  --delete
 
 install:
-	pip install pelican
-	pip install pelican-jinja2content
+	pip install pelican	
 	pip install livereload
-	pip install build
+	pip install git+https://github.com/rr326/pelican-cleanurls.git
 	
 
 debug:
 	# Note - it is the -l that conflics with --debug preventing a full stack trace
 	pelican --debug "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
-subtree:
-	@echo "Pull pelican-page-hierarchy plugin from upstream"
-	git fetch pelican-page-hierarchy
-	git subree pull --prefix plugins/pelican-page-hierarchy pelican-page-hierarchy master --squash
+submodule_add:
+	git submodule add https://github.com/rr326/pelican-cleanurls.git plugins/pelican-cleanurls
 
-subtree_push:
-	@echo "Push pelican-page-hierarchy plugin to upstream"
-	git subtree push --prefix="plugins/pelican-page-hierarchy" pelican-page-hierarchy master
+submodle_init:
+	git submodule init
+	git submodule update
 
 .PHONY: html help clean regenerate serve serve-global devserver publish s3_upload install
