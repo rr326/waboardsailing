@@ -1,5 +1,5 @@
 from functools import partial
-from pelican_path_metadata import (
+from pelican_cleanurl import (
     transform_path,
     DEFAULT_EXCLUDE_PAGE_PATHS,
     DEFAULT_EXCLUDE_HEAD_RE,

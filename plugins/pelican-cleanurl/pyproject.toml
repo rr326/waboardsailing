@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "pelican-pelican-path-metadata"
+name = "pelican-cleanurl"
 version = "0.0.1"
-description = "A pelican plugin to add path metadata"
+description = "A pelican plugin to create clean page urls"
 authors = ["Ross Rosen <rrosen326@gmail.com>"]
 license = "MIT"
 readme = "README.md"
@@ -23,9 +23,6 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
-[tool.poetry.urls]
-"Funding" = "https://donate.getpelican.com/"
-"Issue Tracker" = "https://github.com/pelican-plugins/pelican-path-metadata/issues"
 
 [tool.poetry.dependencies]
 python = ">=3.6.2,<4.0"
