@@ -18,7 +18,7 @@ author_email: cab_mall0n@icloud.com
 ## Overview
 
 There are two main launches in Seattle's Magnusson Park - this one (SSP),
-which is best in a northerly wind, and [Mags](/pages/sites/mags.html),
+which is best in a northerly wind, and [Mags](/sites/mags),
 which is best in a southerly.
 
 In a northerly (especially NE), SSP is one of the safest launches around.

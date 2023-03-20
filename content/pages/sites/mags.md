@@ -18,7 +18,7 @@ author_email: cab_mall0n@icloud.com
 ## Overview
 
 There are two main launches in Seattle's Magnusson Park - this one (Mags),
-which is best in southerly wind, and [Sail Saind Point](/pages/sites/ssp.html),
+which is best in southerly wind, and [Sail Saind Point](/sites/ssp),
 which is best in a northerly.
 
 The ideal wind for mags is a SE - the wind comes in unobstructed and is side

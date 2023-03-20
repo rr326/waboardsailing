@@ -1,7 +1,7 @@
 Title: Sites
 
 # Sites / Launches 
-*Link: [Full Sized Map](/pages/map.html)*
+*Link: [Full Sized Map](/map)*
 
 <div style="float: right; width: 100%;" >
     <iframe
@@ -13,12 +13,12 @@ Title: Sites
 
 ## Forecasting
 
-See our [forecast page](/pages/forecast.html).
+See our [forecast page](/forecast).
 
 ## Lake Washington
 
-* [Magnusson Park (mags)](/pages/sites/mags.html)
-* [Sail Sand Point (ssp)](/pages/sites/ssp.html)
+* [Magnusson Park (mags)](/sites/mags)
+* [Sail Sand Point (ssp)](/sites/ssp)
 * OO Denny
 * Waverly
 * Newcastle

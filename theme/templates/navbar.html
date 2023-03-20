@@ -26,7 +26,7 @@
         <a class="nav-link" aria-current="page" href="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/pages/map.html">Map</a>
+        <a class="nav-link" href="/map">Map</a>
       </li>
       <li class="nav-item dropdown">
         <a
@@ -40,22 +40,24 @@
         </a>
         <ul class="dropdown-menu">
           <li>
-            <a class="dropdown-item" href="/pages/sites.html">All Sites</a>
+            <a class="dropdown-item" href="/sites">All Sites</a>
           </li>
           <li><hr class="dropdown-divider" /></li>
-          {% for page in pages %} {% if page.relative_source_path[5:12] ==
-          '/sites/' %}
-          <li>
-            <a class="dropdown-item" href="/pages/{{page.relative_source_path[6:]|replace('.md', '.html')}}"
-              >{{page.title}}</a
-            >
-          </li>
-          {% endif %} {% endfor %}
+          {% for page in pages %} 
+            {% if page.metadata['cleanurl'][:6] == 'sites/' %}
+              <li>
+                <a class="dropdown-item" href="/{{page.metadata['cleanurl']}}"
+                  >{{page.title}}</a
+                >
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/pages/forecast.html">Forecast</a>
+        <a class="nav-link" href="/forecast">Forecast</a>
       </li>
+
       <li class="nav-item dropdown">
         <a
           class="nav-link dropdown-toggle"
@@ -67,20 +69,18 @@
           Resources
         </a>
         <ul class="dropdown-menu">
-          <li>
-            <a class="dropdown-item" href="/pages/resources.html">Overview</a>
-          </li>
-          <li><hr class="dropdown-divider" /></li>
-          {% for page in pages %} {% if page.relative_source_path[5:16] ==
-          '/resources/' %}
-          <li>
-            <a class="dropdown-item" href="{{page.relative_source_path[6:]|replace('.md', '.html')}}"
-              >{{page.title}}</a
-            >
-          </li>
-          {% endif %} {% endfor %}
+          {% for page in pages %} 
+            {% if page.metadata['cleanurl'][:10] == 'resources/' %}
+              <li>
+                <a class="dropdown-item" href="/{{page.metadata['cleanurl']}}"
+                  >{{page.title}}</a
+                >
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
-      </li>
+      </li>      
+
     </ul>
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
       <li class="nav-item">
@@ -91,7 +91,7 @@
       <li class="nav-item">
         <a
           class="btn btn-danger"
-          href="/pages/contributing.html"
+          href="/contributing"
           class="nav-link"
           >Contributing</a
         >
