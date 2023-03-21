@@ -7,6 +7,8 @@ INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
+TAILWIND_INPUT=$(BASEDIR)/tailwind_input/tailwindinput.css
+TAILWIND_OUTPUT=$(OUTPUTDIR)/tailwind/tailout.css
 
 S3_BUCKET=www.waboardsailing.org
 
@@ -73,7 +75,8 @@ devserver:
 devserver-global:
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -b 0.0.0.0
 
-publish:
+publish: clean
+	npx tailwindcss -i "$(TAILWIND_INPUT)" -o "$(TAILWIND_OUTPUT)"
 	pelican "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
 upload: publish
@@ -90,6 +93,10 @@ debug:
 	pelican --debug "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 upgrade:
-	pip install -U git+https://github.com/rr326/pelican-cleanurl.git	
+	pip install -U git+https://github.com/rr326/pelican-cleanurl.github
+
+tailwind:
+	@echo "Build and watch tailwind"
+	npx tailwindcss -i "$(TAILWIND_INPUT)" -o "$(TAILWIND_OUTPUT)" --watch
 
 .PHONY: html help clean regenerate serve serve-global devserver publish s3_upload install debug upgrade

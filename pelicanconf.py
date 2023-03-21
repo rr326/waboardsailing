@@ -48,3 +48,6 @@ STATIC_SAVE_AS = '{path}'
 PAGE_URL = '{cleanurl}'
 PAGE_SAVE_AS = '{cleanurl_saveas}'
 INDEX_SAVE_AS = ''
+
+# TailwindCSS Stuff
+OUTPUT_RETENTION=["tailwind/tailout.css"]
