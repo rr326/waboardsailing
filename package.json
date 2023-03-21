@@ -1,0 +1,23 @@
+{
+  "name": "waboardsailing",
+  "version": "0.0.1",
+  "description": "",
+  "main": "\"\"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rr326/waboardsailing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rr326/waboardsailing/issues"
+  },
+  "homepage": "https://github.com/rr326/waboardsailing#readme",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "tailwind": "^4.0.0"
+  }
+}

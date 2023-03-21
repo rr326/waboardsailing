@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.font-display{
+    font-family: Raleway, Montserrat, Roboto,"Helvetica Neue", sans-serif;
+}
