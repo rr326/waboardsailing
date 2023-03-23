@@ -21,6 +21,32 @@
 
         min-height: 500px;
       }
+
+
+      @media only screen and (max-width: 400px) {
+        .background {
+          min-height: 300px;
+        }
+          .display-2 {
+              font-size: 30px;
+          }
+          .display-6 {
+              font-size: 22px;
+          }
+      }
+      
+      @media only screen and (min-width: 401px) and (max-width: 450px) {
+        .background {
+          min-height: 400px;
+        }
+          .display-2 {
+              font-size: 35px;
+          }
+          .display-6 {
+              font-size: 27px;
+          }
+      }
+
     </style>
 
     <section id="content">
@@ -28,7 +54,7 @@
       <div
         class="background d-flex flex-column text-light text-center align-items-center justify-content-center px-5 text-shadow"
       >
-        <h1 class="display-2 fw-bold lh-4">Welcome to WA&nbsp;Boardsailing</h1>
+        <h1 class="display-2 fw-bold lh-4 mb-4">Welcome to WA&nbsp;Boardsailing</h1>
         <p class="lead display-6 fw-bolder">
           WA Boardsailing shares information about windsurfing and winging in
           the Pacific Northwest.

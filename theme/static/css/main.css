@@ -1,6 +1,7 @@
 :root {
     --bs-font-sans-serif: Montserrat, Roboto,"Helvetica Neue", sans-serif;
     --bs-body-font-family: var(--bs-font-sans-serif);
+    
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -10,3 +11,6 @@ h1, h2, h3, h4, h5, h6 {
 .display-1, .display-2, .display-3, .display-4, .display-6, .display-6, nav {
     font-family: Raleway, Montserrat, Roboto,"Helvetica Neue", sans-serif;
 } 
+
+/* Display (hero) fonts for small screens */
+
