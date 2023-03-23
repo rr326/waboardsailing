@@ -22,6 +22,15 @@ area labeled "Advanced Topics". Even there, try not to be too controversial.
 If there is significant disagreement between experts, refer to it in the
 "NW-Windtalk Threads" section.
 
+## Where to Send Files
+
+The easiest for me is if you drop them directly in my
+[Dropbox Folder](https://www.dropbox.com/request/1VXxCyjf1txdRb2PPV9V).
+Just click that link and you can drop files there.
+
+Or you can <a href="mailto:cab_mall0n@icloud.com" >email me.</a>. But if
+you have big files (like photos), please use the above Dropbox link.
+
 ## Technical Expertise
 
 This site is written in a modified version of ["Markdown"](https://www.markdownguide.org/getting-started/).
@@ -38,7 +47,6 @@ This website uses a website builder call [Pelican](https://getpelican.com). It u
 Markdown, with some "metadata" at the top, and with a custom theme that I built.
 Below is an example of the Markdown for the Magnusson page.
 
-
 ```
 template: site
 Title: Mags
@@ -50,7 +58,7 @@ fee: Free
 parking: Ample
 launch: Open grassy area followed by a small drop and rocky beach. Wind shadow when wind is westerly.
 forecast: <a href="https://wx.ikitesurf.com/spot/116695" target="_blank">iWindsurf</a>
-webcam: 
+webcam:
 author: Ross Rosen
 author_email: cab_mall0n@icloud.com
 
@@ -83,18 +91,18 @@ TBD
 Unfortunately, this stuff is a bit picky, so do your best but don't sweat
 it.
 
-* `template` 
-    * If a launch, set as `site`
-    * Otherwise, **DELETE THE WHOLE LINE**
-* `Title` - This determines the page name
-    * Otherwise, **DELETE THE WHOLE LINE**
-* `lat_lon`
-    * Copy this from Google Maps. Point to the parking lot
-    * The computer will automatically create a Google Map link.
-* `forecast` and `webcam` 
-    * If you are technical, you can insert html links to the best
-      forecast pages. Like this: 
-      `<a href="https://wx.ikitesurf.com/spot/116695" target="_blank">iWindsurf</a>` 
-    * If you are not, just paste the links and I'll deal with it.
-* `author_email` - I used my mac to create a 'hide my email' email address, just 
-    in case it gets picked up by spam bots. 
+- `template`
+  - If a launch, set as `site`
+  - Otherwise, **DELETE THE WHOLE LINE**
+- `Title` - This determines the page name
+  - Otherwise, **DELETE THE WHOLE LINE**
+- `lat_lon`
+  - Copy this from Google Maps. Point to the parking lot
+  - The computer will automatically create a Google Map link.
+- `forecast` and `webcam`
+  - If you are technical, you can insert html links to the best
+    forecast pages. Like this:
+    `<a href="https://wx.ikitesurf.com/spot/116695" target="_blank">iWindsurf</a>`
+  - If you are not, just paste the links and I'll deal with it.
+- `author_email` - I used my mac to create a 'hide my email' email address, just
+  in case it gets picked up by spam bots.
