@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
+    {% if USE_GOOGLE_ANALYTICS %}
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V528S74T5R"></script>
     <script>
@@ -10,6 +11,7 @@
 
       gtag('config', 'G-V528S74T5R');
     </script>
+    {% endif %}
 
     {% block head %}
     <meta charset="utf-8" />

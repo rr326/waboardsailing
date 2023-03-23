@@ -10,6 +10,7 @@ from pelicanconf import *
 SITEURL = ''
 RELATIVE_URLS = False
 LIVERELOAD = False
+USE_GOOGLE_ANALYTICS = True
 
 DELETE_OUTPUT_DIRECTORY = True
 
