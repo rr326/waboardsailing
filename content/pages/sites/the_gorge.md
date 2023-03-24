@@ -17,27 +17,27 @@ Portland to 2 hours east of Portland.
 
 ## WA Sailor Gallery
 
-<div  class="carousel slide" data-bs-ride="carousel">
+<div  id="photo_gallery" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/images/maryhill_action_matt_krus.jpeg" class="d-block w-100" alt="...">
+      <img src="/images/action/maryhill_action_matt_krus.jpeg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h4>Matt Krus at Maryhill</h4>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/images/roosevelt_action_matt_krus.jpeg" class="d-block w-100" alt="...">
+      <img src="/images/action/roosevelt_action_matt_krus.jpeg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h4>Matt Krus at Roosevelt</h4>
       </div>
     </div>
 
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#photo_gallery" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#photo_gallery" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -67,10 +67,10 @@ restaurants, breweries, hotels, etc. It is also home to some of the best beginne
 
 ## Novice Launches
 
-- **The Hook** \* The Hook is
+- **The Hook** - The Hook is
   totally protected and sheltered from the strongest winds. There are also
   boards and instructors right there.
-- **The Event Site** \* The Event Site
+- **The Event Site** - The Event Site
   has an area that is also quite protected and suitable for begginners and has
   instructors and rental gear.
 
@@ -78,16 +78,16 @@ restaurants, breweries, hotels, etc. It is also home to some of the best beginne
 
 It's probably best to learn from dedicated Gorge sites but here are two places to start you off.
 
-- **Waterfront Park** \* This is just a little west of the Event Site and is very forgiving in a westerly.
+- **Waterfront Park** - This is just a little west of the Event Site and is very forgiving in a westerly.
   The wind is a bit sheltered closer to shore and if things go awry and the wind pushes you
   downwind towards the east, you can climb out at many points, all the way to the Event Site. On an
   easteryly, you'd float to the hook. Just stay close to the south shore.
-- **The Event Site** \* A really nice launch with lots of good sailors to watch. Stay close to the south shore and you have
+- **The Event Site** - A really nice launch with lots of good sailors to watch. Stay close to the south shore and you have
   plenty of room to drift east or west without risk.
 
 ## Resources
 
-TBD \* Links to sites
+TBD - Links to sites
 
 - [The CGWA Guide](https://cgw2.org/local*info/)
 - [Tourist Guide](https://columbiagorgetomthood.com/windsurfing/)
@@ -97,8 +97,8 @@ TBD \* Links to sites
 There are many and I haven't met anyone who wasn't helpful. That said, here are my pointers
 to get you started.
 
-- [Big Winds](http://www.bigwinds.com/) \* They have always been incredibly helpful and knowledgeable. They are my goto spot.
-- [Winddance](http://www.windance.com/) \* They have a big selection of used gear.
+- [Big Winds](http://www.bigwinds.com/) - They have always been incredibly helpful and knowledgeable. They are my goto spot.
+- [Winddance](http://www.windance.com/) - They have a big selection of used gear.
 
 ## Where To Stay
 

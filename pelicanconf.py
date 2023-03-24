@@ -29,7 +29,7 @@ DEFAULT_PAGINATION = False
 
 THEME = "theme"
 
-LIVERELOAD = True
+# LIVERELOAD = True
 USE_GOOGLE_ANALYTICS = False
 
 # Disable page creation of pages I don't care about

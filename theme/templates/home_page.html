@@ -1,1 +1,44 @@
-{% extends "page.html" %}
+{% extends "page.html" %} 
+
+{% set action_images =
+[("maryhill_action_matt_krus.jpeg", "Matt Krus at Maryhill"),
+("newcastle_action_matt_krus.jpeg", "Matt Krus at Newcastle"),
+("roosevelt_action_matt_krus.jpeg", "Matt Krus at Roosevelt")]%} 
+
+{% block content %}
+
+<section id="content" class="body">
+  {{ super() }}
+
+  <div id="actionCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      {% for (image, caption) in action_images %}
+      <div class="carousel-item  {% if loop.index == 1 %}active{%endif %}">
+        <img src="/images/action/{{image}}" class="d-block w-100" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+          <h4>{{caption}}</h4>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#actionCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#actionCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+{% endblock %}
