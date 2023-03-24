@@ -1,7 +1,8 @@
 Title: Sites
 
-# Sites / Launches 
-*Link: [Full Sized Map](/map)*
+# Sites / Launches
+
+_Link: [Full Sized Map](/map)_
 
 <div style="float: right; width: 100%;" >
     <iframe
@@ -17,54 +18,59 @@ See our [forecast page](/forecast).
 
 ## Lake Washington
 
-* [Magnusson Park (mags)](/sites/mags)
-* [Sail Sand Point (ssp)](/sites/ssp)
-* OO Denny
-* Waverly
-* Newcastle
-* Coulon
-* Mt Baker
-* Calkins Landing
-* Madrona
-* Green Lake (not quite Lake Washington!)
+- [Magnusson Park (mags)](/sites/mags)
+- [Sail Sand Point (ssp)](/sites/ssp)
+- OO Denny
+- Waverly
+- Marsh Park
+- Newcastle
+- Coulon
+- Mt Baker
+- Calkins Landing
+- Madrona
+- Green Lake (not quite Lake Washington!)
 
 ## Puget Sound
 
-* Kayak Point
-* Jetty Island
-* Edgewater Beach Park
-* Marina Beach Park (Edmonds)
-* Golden Gardens
-* Lowman Beach Park
-* Seahurst Park
-* Three Tree Point
-* Des Moines
-* Browns Point Lighthouse (Tacoma)
+- Kayak Point
+- Jetty Island
+- Edgewater Beach Park
+- Marina Beach Park (Edmonds)
+- Golden Gardens
+- Lowman Beach Park
+- Seahurst Park
+- Three Tree Point
+- Des Moines
+- Browns Point Lighthouse (Tacoma)
 
 ## Olympic Peninsula
 
-* Dungeness Spit
-* Marrowstone / Fort Flagler
-* Purdy Sand Spit
-* Westhaven
-* Damon Point
-
+- Dungeness Spit
+- Marrowstone / Fort Flagler
+- Purdy Sand Spit
+- Westhaven
+- Damon Point
+- [Crescent Beach](/sites/crescent_beach)
 
 ## San Juan Islands
 
 There must be some more launches here!
 
-* Double Bluff (Whidbey Island)
+- Double Bluff (Whidbey Island)
+
+## Columbia Plateau
+
+- Lake Wenatchee
+- Lake Kachess
+- Rimrock
+- [Vantage](/sites/vantage)
 
 ## Others
 
-* Lake Wenatchee
-* Rimrock
-* Greenlake (Seattle)
-* Lake Kachess
+- Greenlake (Seattle)
 
 ## Further afield
 
-* The Gorge
-* Oregon Coast
-* 
+- The Gorge
+- Oregon Coast
+-
