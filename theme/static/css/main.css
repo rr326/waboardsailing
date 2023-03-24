@@ -6,6 +6,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
+    margin-top: 1em;
 }
 
 .display-1, .display-2, .display-3, .display-4, .display-6, .display-6, nav {
@@ -18,3 +19,21 @@ img {
     height: auto;
 }
 
+/*  https://stackoverflow.com/a/15668970 */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+  }
+  .iframe-container > * {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 110px); /* -100px for footer */
+    width: 100%;
+  }
