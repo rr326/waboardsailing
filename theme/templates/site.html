@@ -1,56 +1,86 @@
-{% extends "page.html" %}
-
+{% extends "page.html" %} 
 {% block content %}
 
 <section id="content">
-    <div class="border border-4 border-dark mb-3">
-        <table class="table table-sm">
-            <thead>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Location</th>
-                    <td><a href="https://www.google.com/maps/place/{{page.lat_lon}}/@{{page.lat_lon}}" target="_blank">{{page.lat_lon}}</a></td>
-                </tr>
-                <tr>
-                    <th>Region</th>
-                    <td>{{page.region}}</td>
-                </tr>
-                <tr>
-                    <th>Easiest Level</th>
-                    <td>{{page.level}}</td>
-                </tr>
-                <tr>
-                    <th>Best Wind</th>
-                    <td>{{page.best_wind}}</td>
-                </tr>
-                <tr>
-                    <th>Fee</th>
-                    <td>{{page.fee}}</td>
-                </tr>
-                <tr>
-                    <th>Parking</th>
-                    <td>{{page.parking}}</td>
-                </tr>
-                <tr>
-                    <th>Launch</th>
-                    <td>{{page.launch}}</td>
-                </tr>
-                <tr>
-                    <th>Forecast</th>
-                    <td>{{page.forecast}}</td>
-                </tr>
-                <tr>
-                    <th>Webcam</th>
-                    <td>{{page.webcam}}</td>
-                </tr>
-                <tr>
-                    <th>Author</th>
-                    <td><a href="mailto:{{page.author_email}}">{{page.author}}</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    {{ page.content }}
+  <div class="border border-4 border-dark mb-3">
+    <table class="table table-sm">
+      <thead></thead>
+      <tbody>
+        <tr>
+          <th>Location</th>
+          <td>
+            <a
+              href="https://www.google.com/maps/place/{{page.lat_lon}}/@{{page.lat_lon}}"
+              target="_blank"
+              >{{page.lat_lon}}</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <th>Region</th>
+          <td>{{page.region}}</td>
+        </tr>
+        <tr>
+          <th>Easiest Level</th>
+          <td>{{page.level}}</td>
+        </tr>
+        <tr>
+          <th>Best Wind</th>
+          <td>{{page.best_wind}}</td>
+        </tr>
+        <tr>
+          <th>Fee</th>
+          <td>{{page.fee}}</td>
+        </tr>
+        <tr>
+          <th>Parking</th>
+          <td>{{page.parking}}</td>
+        </tr>
+        <tr>
+          <th>Launch</th>
+          <td>{{page.launch}}</td>
+        </tr>
+        <tr>
+          <th>Forecast</th>
+          <td>{{page.forecast}}</td>
+        </tr>
+        <tr>
+          <th>Webcam</th>
+          <td>{{page.webcam}}</td>
+        </tr>
+        <tr>
+          <th>Author</th>
+          <td><a href="mailto:{{page.author_email}}">{{page.author}}</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  {{ page.content }}
+
+  {% if page.lat_lon %} 
+    {% set lat = page.lat_lon|split(',', strip=True)|el(0)%} 
+    {% set lon
+    = page.lat_lon|split(',')|el(1)%}
+
+    <h3>Windy</h3>
+    <iframe
+        width="900"
+        height="650"
+        src="https://embed.windy.com/embed2.html?lat={{lat}}&lon={{lon}}&detailLat={{lat}}&detailLon={{lon}}&width=650&height=650&zoom=10&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=default&metricTemp=default&radarRange=-1"
+        frameborder="0"
+    ></iframe>
+  {% endif %}
+
+  {% if page.iwindsurf_spot %}
+    <h3>iWindsurf Current Conditions</h3>
+    <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/currentConditions?spot_id={{page.iwindsurf_spot}}&amp;units_wind=mph&amp;units_temp=F&amp;width=900&amp;height=400&amp;include_fx=false&amp;color=163770&amp;t&amp;activity=Windsurf&amp;app=iwindsurf" width="900" height="400" frameborder="0" scrolling="no" allowtransparency="no" class="mb-3"></iframe>
+
+    <h3>iWindsurf Forecast (free)</h3>
+    <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id={{page.iwindsurf_spot}}&amp;units_wind=mph&amp;units_temp=F&amp;type=daily&amp;width=900&amp;height=420&amp;color=163770&amp;activity=Windsurf&amp;app=iwindsurf" width="900" height="420" frameborder="0" scrolling="no" allowtransparency="no" class="mb-3"></iframe>
+
+    <h3>Historical Wind</h3>
+    <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/windStats?spot_id={{page.iwindsurf_spot}}&amp;units_wind=mph&amp;color=163770&amp;activity=Windsurf&amp;app=iwindsurf&amp;width=900" width="900" height="400" frameborder="0" scrolling="no" allowtransparency="no" class="mb-3"></iframe>  
+  {% endif %}
+
 </section>
 {% endblock %}

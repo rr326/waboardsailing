@@ -1,6 +1,7 @@
 template: site
 Title: Sail Sand Point
-lat_lon:47.688868, -122.264970
+lat_lon: 47.688868, -122.264970
+iwindsurf_spot: 116695
 region: Lake Washington
 best_wind: N, NE
 level: beginner

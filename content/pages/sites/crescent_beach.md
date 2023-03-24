@@ -1,6 +1,7 @@
 template: site
 Title: Crescent Beach
 lat_lon: 48.15972,-123.71023
+iwindsurf_spot: 174183
 region: Olympic Peninsula
 best_wind: NW
 level: beginner
