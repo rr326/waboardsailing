@@ -63,7 +63,7 @@ serve:
 serve-global:
 	pelican -l "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS) -b $(SERVER)
 
-devserver:
+devserver: clean
 	@clear
 	( [[ `pgrep -f livereload` ]] || livereload "$(OUTPUTDIR)" > tmp/log_livereload.log &)
 	@echo "#### LIVERELOAD RUNNING ####"
