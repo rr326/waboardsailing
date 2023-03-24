@@ -12,5 +12,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Raleway, Montserrat, Roboto,"Helvetica Neue", sans-serif;
 } 
 
-/* Display (hero) fonts for small screens */
+/* default image styling - manually inheritting from "img-fluid" */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
