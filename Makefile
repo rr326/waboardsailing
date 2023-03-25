@@ -63,10 +63,12 @@ serve:
 serve-global:
 	pelican -l "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS) -b $(SERVER)
 
-devserver: clean
-	@clear
-	( [[ `pgrep -f livereload` ]] || livereload "$(OUTPUTDIR)" > tmp/log_livereload.log &)
+livereload:
+	[[ `pgrep -f livereload` ]] || livereload --wait 0.5 --debug "$(OUTPUTDIR)" &
 	@echo "#### LIVERELOAD RUNNING ####"
+
+devserver:  
+	@clear
 	@printf "\n\n**** WARNING ****\n"
 	@printf "If this crashes, run 'make debug' for a full stack trace.\n********************\n\n"
 	pelican -lr --debug "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
@@ -93,4 +95,4 @@ debug:
 upgrade:
 	pip install -U git+https://github.com/rr326/pelican-cleanurl.git	
 
-.PHONY: html help clean regenerate serve serve-global devserver publish s3_upload install debug upgrade
+.PHONY: html help clean regenerate serve serve-global devserver publish s3_upload install debug upgrade livereload
