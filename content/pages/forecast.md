@@ -13,7 +13,7 @@ want to get involved in the [nw-windtalk email group](https://groups.io/g/nw-win
 and talk up your fellow sailors. And experiment. And learn to read tea leaves.
 
 Here you will hopefully find enough information for the beginner or interemediate WA
-boadsailor get started.
+boadsailor to get started.
 
 ## Resources
 
@@ -22,6 +22,8 @@ boadsailor get started.
   This website will often refer to data that you can only get through iWindsurf.
   In summer iWindsurf also has a dedicated pro forecast which is helpful.
 - [windy.com](windy.com) - The free app is quite good. For ~20/year you get more features.
+- [Forecasting from Phillip Schonger](https://m.facebook.com/notes/northwest-kiteboarders/wind-forecasting-guide-to-keep-you-riding-and-stay-stoked-in-the-pacific-northwe/269856384324947/?wtsid=rdr_0zqxM5hUHhRnCQKeG) - This is a great, in-depth resource for PNW wind forecasting (from a kiter's perspective). It can be a bit overwhelming though. 
+- [TJ's Jetty](http://wxtofly.net/loopallbasic.html?param=tenmwind&region=PNW&grid=d2), [TJ's - Explanation](https://pskite.org/wiki/tiki-index.php?page=TJs_forecast) - TJ's is beloved by all forecasting experts, but I find it utterly baffling. Good luck.
 
 ## Seattle Region
 
