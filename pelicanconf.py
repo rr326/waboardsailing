@@ -1,9 +1,9 @@
 import os
 import sys
 sys.path.append(os.curdir)
-from custom_jinja_filters import split, el
+from custom_jinja_filters import split, el, shuffle
 
-JINJA_FILTERS = {"split": split, "el": el}
+JINJA_FILTERS = {"split": split, "el": el, "shuffle": shuffle}
 
 
 AUTHOR = "rrosen326@gmail.com"

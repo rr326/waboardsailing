@@ -12,7 +12,7 @@
 
   <div id="actionCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      {% for (image, caption) in action_images %}
+      {% for (image, caption) in action_images | shuffle %}
       <div class="carousel-item  {% if loop.index == 1 %}active{%endif %}">
         <img src="/images/action/{{image}}" class="d-block w-100" alt="..." />
         <div class="carousel-caption d-none d-md-block">
