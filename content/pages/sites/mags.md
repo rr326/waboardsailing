@@ -2,7 +2,7 @@ template: site
 Title: Mags
 lat_lon: 47.675585, -122.251607
 region: Lake Washington
-best_wind: SE, S, SE (side offshore)
+best_wind: SE, S, SW (side offshore)
 level: intermediate
 fee: Free
 parking: Ample
