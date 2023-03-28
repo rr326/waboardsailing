@@ -2,19 +2,38 @@ template: site
 Title: Vantage
 lat_lon: 46.94202060217327,-119.98997079654664
 region: Columbia Plateau
-best_wind: E (Wanapum), W (Sand Hollow), N (Vantage Boat Launch)
-level: beginner
-fee: "Small Fee"
+best_wind: #1 <b>Best</b> & dominant <i>onshore</i> <b>W-by-NW</b> (Sand Hollow), #2 E (Wanapum), #3 N (Vantage Boat Launch, where the iWindsurf sensor is)
+level: intermediate to expert
+fee: <b>Free</b> for <a href="https://www.grantpud.org/templates/galaxy/images/images/Downloads/Recreation/SandHollowCampSitemapForWeb.png">Sand Hollow Campground</a>, #2 <b>Discovery Pass</b> required for <a href="https://beautifulwashington.com/eastern-washington/attractions/columbia-plateau-area-2/415-wanapum-campground.html">Wanapum State Park</a> | #3 <b>Free</b> for <a href="https://www.grantpud.org/component/zoo/item/vantage-boat-launch-recreation-area">Vantage Boat Launch</a>
+launch: <b>3 sites</b>: #1 <a href="https://www.google.com/maps/place/Sand+Hollow+Campground/@46.9219958,-119.9559509,17z/data=!3m1!4b1!4m9!3m8!1s0x5499a240facb4317:0x10b510f26daecfab!5m2!4m1!1i2!8m2!3d46.9219958!4d-119.9537622!16s%2Fg%2F11bzq36tc7">Sand Hollow (dry) Campground</a>, #2 <a href="https://www.google.com/maps/dir//Vantage,+Washington+98950/@46.9019355,-119.9941143,16.22z/data=!4m9!4m8!1m0!1m5!1m1!1s0x5499a2e6d04187ff:0x72444b59a3eadbe4!2m2!1d-119.98956!2d46.9010859!3e0">Wanapum State Park, South parking</a>, #3 <a href="https://www.google.com/maps/place/Vantage+Boat+Launch/@46.9411357,-119.9868578,17z/data=!3m1!4b1!4m6!3m5!1s0x5499989cd8233613:0xe88055a9248273bb!8m2!3d46.9411357!4d-119.9846691!16s%2Fg%2F11f01chd7w">Vantage Boat Launch</a>
+webcam: <b>2 I90</b> cams:  <a href="https://wsdot.com/travel/real-time/map/?featuretype=camera&featureid=9686">I90 East</a>, <a href="https://wsdot.com/travel/real-time/map/?featuretype=camera&featureid=1107">I90 West</a>
 author: Guislain
 
 # Vantage
 
-From Guislain:  
+##### **PROs**: "_If there is wind you can always windsurf at Vantage, regardless of the wind direction._"
 
-specifically these launch sites literally 5mins from each other, which makes Vantage a good destination regardless of wind directions:
+- Vantage has the unique characteristic to have **3 launch sites** literally within **7 min** of each other, each best suited for different wind directions.
+- When **ON**, the dominant **W-by-NW thermals** are very predictable, starting **from ~1p** and steadily _increasing_ **until 5p** when they can be quite _strong_, before they start to drop before sunset.
+- But at sunset, you get an _encore_ with [katabatic winds](https://en.wikipedia.org/wiki/Katabatic_wind)
+- **NOTE**: _Why are Vantage winds so predictable?_ As the mostly sea-level cool air on the west side of the Cascades rises towards Snowqualmie Pass, it cools down, compresses, and drops its moisture. Once it reaches the 3,000ft pass, it enters the Kittitas Valley a typically much warmer 1,500ft high-desert Columbia Plateau shaped like a corridor. As the air warms up, it expands and accelerates down the valley which acts as a funnel towards the Whisky Dick Ridge , where [PSE Wild Horse Wind Farm](https://www.pse.com/en/pages/tours-and-recreation/wild-horse) has 149 wind turbines overlooking the Columbia River at Vantage. From the edge of the canyon, it drops down into the canyon walls in a swooping motion across the Columbia River reaching the Sand Hollow shoreline unobstructed.
+- **TIPs**:
+  - If the temperature in Ellensburg is 15°F more than Seattle/Kirkland (i.e. around Lake WA), which is pretty common 3 seasons out of the year, then you can be pretty sure that the Kittitas thermals will be **ON**.
+  - The entrance of the (dry) Sand Hollow Campground with its 3 picnic shelters is the best place to rig your gear (on the always empty handicap parking stall to avoid knicking your sail on gravel).
+  - Wearing booties for protection on the gravel and traction on the smooth rocks is highly recommended.
+  - Because the Kittitas thermals are shaped like a bell curve, plan ahead in order to "hit your window" at the opportune time, based on your skill level and your gear.
+  - The dominant winds are W by NW thermal and can be very strong (force 4 to 6 on [Beaufort scale](https://en.wikipedia.org/wiki/Beaufort_scale), between 15 to 30 knots); it is the Columbia River after all...
+  - Since the [Vantage iWindsurf](https://wx.iwindsurf.com/spot/11461) sensor is at the [Vantage boat launch](https://wx.iwindsurf.com/map#46.94,-119.985,14,1) on the western shore - in the **wind shadow** of the canyon - it can be misleading and not representative of the conditions on the eastern shore at Sand Hollow, so balance data from that sensor with data from these other two upwind sensors in the Kittitas valley thermal channel:
+    - [Ellensburg iWindsurf](https://wx.iwindsurf.com/spot/1012) sensor, and scroll down to the Wind Statistics for seasonal wind patterns,
+    - [Ryegrass Summit iWindsurf](https://wx.iwindsurf.com/spot/11451) sensor, which is on the Whisky Dick Ridge, and scroll down to the Wind Statistics for seasonal winds patterns.
 
-- Sand Hollow Campground, best for dominant and strong W by NW thermal winds as well as milder SW winds,
-- Wanapum State Park, good for NE, E, SE winds, but dangerous with dominant W by NW winds because of the canyon wind shadow,
-- Vantage Boat launch, good for rare northerlies
+##### **CONs/Caution**: _"Windsurfing can be an extreme sport, and Vantage can be such a spot."_
+
+- **WARNING**: Vantage is _not a recommended_ windsurfing spot for _beginners_. Always have an exit plan, should you get overpowered, break gear or injure yourself.
+- The **Sand Hollow** launch site, is very good when the dominant **W by NW thermals** are blowing, but it can **get choppy** quickly as the onshore thermals race across the river, and it is not unusual to see whitecaps develop on the eastern half of the Columbia, while none appear on the western half, because that half still is in the wind shadow of the canyon, and the chop has not had time to develop yet. Furthermore, where there are cliffs, the chop will bounce back On such days, driving over the I90 bridge back & forth is a good idea in order to have a birdeye view of the unique local sailing conditions.
+- The **Wanapum State Park** launch site, is good for NE, E, SE winds, but **dangerous when the dominant W by NW thermals** are blowing, because once you leave the wind shadow of the canyon, you are likely to get overpowered and blown across the river. If you do, do not panick because:
+  1. the Wanapum State Park Rangers have a motor skiff and may be able to get to you,
+  2. if they don't, staying with your board (sailor 101 survival) and trying to drift towards the fairly long Sand Hollow shoreline may be your best option.
+- **DISCLAIMER**: At Vantage the Columbia River runs North/South and since the dominant winds are N-by-NW winds, it means you will face onshore winds, albeit never dead-on, but some boardsailors do not like that. If that is your case, no problem; don't go.
 
 ![Vantage](/images/vantage.png)
