@@ -1,9 +1,10 @@
 import os
 import sys
-sys.path.append(os.curdir)
-from custom_jinja_filters import split, el, shuffle
 
-JINJA_FILTERS = {"split": split, "el": el, "shuffle": shuffle}
+sys.path.append(os.curdir)
+from custom_jinja_filters import split, el, shuffle, markdown
+
+JINJA_FILTERS = {"split": split, "el": el, "shuffle": shuffle, "markdown": markdown}
 
 
 AUTHOR = "rrosen326@gmail.com"

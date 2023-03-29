@@ -5,6 +5,7 @@ Custom jinja filters
 import random
 from collections.abc import Sequence
 from typing import List, TypeVar
+import markdown as markdown_library
 
 T = TypeVar("T")
 
@@ -40,3 +41,22 @@ def shuffle(value: List) -> List:
     copied = value.copy()
     random.shuffle(copied)
     return copied
+
+
+def markdown(value: str, skip_nomarkdown=True) -> str:
+    """
+    Translates value (as markdown) into html
+    skip_nomarkdown: if True, and text has no markdown, don't wrap in p.
+    ex: "text" --> "<p>text</p>" --> "text"
+    """
+    if not isinstance(value, str):
+        return value
+    try:
+        html = markdown_library.markdown(value)
+        if skip_nomarkdown:
+            if html == "<p>"+value+"</p>":
+                html = value
+    except Exception as err:
+        return f"Markdown Error ({err}) on {value}"
+    else:
+        return html

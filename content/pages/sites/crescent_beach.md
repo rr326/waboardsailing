@@ -5,8 +5,8 @@ iwindsurf_spot: 174183
 region: Olympic Peninsula
 best_wind: NW
 level: beginner
-fee: "Small Fee"
-launch: Either <b>West</b> of Salt Creek (best) from <a href="https://www.crescentbeachrv.com/">Crescent Beach RV Park & Campground</a>, or <b>East</b> of Salt Creek (fair) from <a href="https://goo.gl/maps/LtfWB4RZFD8CFaLB9">Salt Creek Beach Parking Lot</a>; refer to important notes below.
+fee: "Small (day use) Fee" from [Crescent Beach RV Park & Campground](https://www.crescentbeachrv.com/) to launch from private beach, free if launching from public beach; refer to Launch"
+launch: Either **West** of Salt Creek (best) from [Crescent Beach RV Park & Campground](https://www.crescentbeachrv.com/), or **East** of Salt Creek (fair) from [Salt Creek Beach Parking Lot](https://goo.gl/maps/LtfWB4RZFD8CFaLB9); refer to important notes below.
 author: Guislain
 
 # Crescent Beach
