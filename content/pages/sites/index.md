@@ -20,6 +20,7 @@ See our [forecast page](/forecast).
 
 - [Magnusson Park (mags)](/sites/mags)
 - [Sail Sand Point (ssp)](/sites/ssp)
+- [Adams Street Boat Ramp](/sites/adams_street)
 - OO Denny
 - Waverly
 - Marsh Park
@@ -73,4 +74,3 @@ There must be some more launches here!
 
 - The Gorge
 - Oregon Coast
-

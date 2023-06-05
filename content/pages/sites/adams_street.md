@@ -19,6 +19,10 @@ Can’t say enough about this launch for northerlies. The place is usually half 
 ![Adams Street Boat Ramp Launch](/images/adams_street.jpeg)
 ![Southern Lake Washington Wind](/images/southern_lake_wa.jpeg)
 
+### Late Summer - beware the weeds
+
+![Late Summer Weeds / Shallows](/images/adams_street_weeds.png)
+
 ## Forecasting
 
 TBD
