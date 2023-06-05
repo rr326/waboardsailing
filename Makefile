@@ -42,7 +42,8 @@ help:
 	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
 	@echo '   make devserver [PORT=8000]          serve and regenerate together      '
 	@echo '   make devserver-global               regenerate and serve on 0.0.0.0    '
-	@echo '   make s3_upload                      upload the web site via S3         '
+	@echo '   make upload                         upload the web site via S3         '
+	@echo '   make install                        install dependencies (default python environment) '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
@@ -83,16 +84,17 @@ upload: publish
 	aws s3 sync "$(PUBLISHDIR)"/ s3://$(S3_BUCKET)  --delete
 
 install:
-	pip install pelican	
+	pip install pelican
+	pip install Markdown
 	pip install livereload
 	pip install git+https://github.com/rr326/pelican-cleanurl.git
-	
+	pip install awscli	
 
 debug:
 	# Note - it is the -l that conflics with --debug preventing a full stack trace
 	pelican --debug "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 upgrade:
-	pip install -U git+https://github.com/rr326/pelican-cleanurl.git	
+	pip install -U git+https://github.com/rr326/pelican-cleanurl.git
 
-.PHONY: html help clean regenerate serve serve-global devserver publish s3_upload install debug upgrade livereload
+.PHONY: html help clean regenerate serve serve-global devserver publish s3_upload install debug upgrade livereload 
