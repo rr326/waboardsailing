@@ -37,3 +37,7 @@ img {
     height: calc(100vh - 110px); /* -100px for footer */
     width: 100%;
   }
+
+  img {
+    margin: 10px auto;
+  }

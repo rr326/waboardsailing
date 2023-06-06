@@ -21,6 +21,7 @@ See our [forecast page](/forecast).
 - [Magnusson Park (mags)](/sites/mags)
 - [Sail Sand Point (ssp)](/sites/ssp)
 - [Adams Street Boat Ramp](/sites/adams_street)
+- [Martha Washington Park](/sites/martha_washington_park)
 - OO Denny
 - Waverly
 - Marsh Park
