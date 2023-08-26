@@ -18,12 +18,17 @@ Can’t say enough about this launch for northerlies. The place is usually half 
 
 Note: No bathroom - only honey buckets. It gets seaweedy in late summer. See the bottom map for areas to avoid.
 
-![Adams Street Boat Ramp Launch](/images/adams_street.jpeg)
+![Adams Street Boat Ramp Launch](/images/adams_street.png)
 ![Southern Lake Washington Wind](/images/southern_lake_wa.jpeg)
 
-### Late Summer - beware the weeds
+### Late Summer - Beware The Weeds
 
 ![Late Summer Weeds / Shallows](/images/adams_street_weeds.png)
+
+### A Great Place For Beginners
+
+The shallow area is quite big (100 yards x 75 yards) and, especially in August when the lake level drops, it is easy to stand in and teach.
+![Adams Street Boat Ramp Launch](/images/adams_street_beginner.jpeg)
 
 ## Forecasting
 
