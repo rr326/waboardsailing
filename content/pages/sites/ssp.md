@@ -11,9 +11,10 @@ launch: Pavement platform with turf (and goose poop!). Shallow and proteced.
 forecast: <a href="https://wx.ikitesurf.com/spot/116695" target="_blank">iWindsurf</a>
 webcam: <a href="https://www.sailsandpoint.org/open-boating/current-conditions/" target="_blank">SSP</a>
 author: Ross Rosen
-author_email: cab_mall0n@icloud.com
+author_email: <cab_mall0n@icloud.com>
 
 # Sail Sand Point
+
 *(aka: SSP )*
 
 ## Overview
@@ -30,9 +31,12 @@ SSP is also home to the [Sail Sand Point](https://www.sailsandpoint.org) boating
 
 ## Forecasting
 
-TBD
+"Both ECMWF and HRRR, while not flawless, have lately been so accurate for SSP thermals that when consistent, I've started just rigging according to the forecast, even when the meter hasn't yet begun winding up.  For SSP, add 1-3 mph to the ECMWF and HRRR forecasts to compensate for resolution limits.
 
+Windy offers a particularly clear comparative forecast picture that includes ECMWF and HRRR:
+<https://www.windy.com/multimodel/47.675/-122.259?47.611,-122.259,11,i:pressure>"
 
+Source: <https://groups.io/g/nw-windtalk/message/82503>
 
 ## Advanced Topics
 
