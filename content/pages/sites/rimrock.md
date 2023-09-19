@@ -7,7 +7,7 @@ level: TBD
 fee: TBD
 parking: TBD
 launch: TBD
-forecast: <a href=<https://wx.ikitesurf.com/search/rimrock%20lake">iWindsurf></a>
+forecast: <a href="https://wx.ikitesurf.com/search/46.643/-121.201/11">iWindsurf</a>
 webcam:
 author: Matt Krus
 

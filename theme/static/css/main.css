@@ -41,3 +41,11 @@ img {
   img {
     margin: 10px auto;
   }
+
+  .site-table {
+    table-layout: fixed;
+  }
+
+  .site-table th {
+    width: 150px;
+  }
