@@ -2,14 +2,14 @@ template: site
 Title: Rimrock
 lat_lon: 46.64284, -121.2013
 region: Inland Washington
-best_wind: TBD
-level: TBD
-fee: TBD
-parking: TBD
-launch: TBD
+best_wind: west
+level: intermediate
+fee: $5/day / NW Forest Pass
+parking: Ample
+launch: No stumps or hazards
 forecast: <a href="https://wx.ikitesurf.com/search/46.643/-121.201/11">iWindsurf</a>
 webcam:
-author: Matt Krus
+author:
 
 # Rimrock
 
@@ -17,21 +17,25 @@ author: Matt Krus
 
 AKA "Horse shoe cove boat launch".
 
-*Information Needed*
+In spring and early summer the water level is right up at the trees.  You park and rig under the trees (no grass there). The water is cold, but not as cold as Lake Wenatchee.  Rimrock warms up so that by August you can go out without a wetsuit.
 
-"I did not do any sailing but took some pics of the windsurf launch Horse Shoe Cove boat launch located 2 miles east of the campground. The lake is really empty this time of year so you can see everything that would normally be covered with water. Looks like a pretty clean launch! No tree stumps or any real noticeable hazards. The water level right now looks to be about 50ft down from high water mark making the beach 100 yards out and the reach 100 yards shorter. Looks like there could be an interesting downwind sandbar that occurs when the water level is somewhere in the middle. I’ve only been thru this area three times and have always noticed a decent breeze, so I’d say it gets a pretty good drainage thermal of 12-18mph pretty regularly. Bring your foiling gear! For all you guys that like to sail around islands there a few of those too."
+The reach is 3/8 mile on fairly flat water.  There is no discernable current.
+
+The elevation is just under 3,000' so it can be pretty cold, even during the summer.
+
+The wind follows the cross-mountain gradient pattern of the Gorge, Lake Wenatchee, and Lake Cle Elum.  It will typically be calm or easterly until about noon.  Then the westerly comes snarling down from White Pass and keeps a good 15-20 all afternoon and into the evening.  Sometimes stronger.  For one 200 pound windsurfer, with a fin, his most used sail was a 7.5, sometimes 6.5, sometimes 8.5.  He foiled there a few times with 6.4 or 5.0.
 
 ![Rimrock Launch](/images/rimrock_map.png)
 ![Rimrock Launch](/images/rimrock_launch.jpeg)
 
-## Forecasting
+*Launch at low water. Park and launch right on the beach.*
 
-TBD
+## Water Level
 
-## Advanced Topics
+Rimrock is a reservoir which drops significantly over the summer. It tends to remain fairly full through July to mid- August, but starts dropping precipitously in mid- to late August.
 
-TBD
+See the reservoir level chart [here](https://www.usbr.gov/pn/hydromet/wygraph.html?list=rim%20af&daily=rim%20af) to get a sense of the water height.
 
 ## NW-Windtalk Threads
 
-TBD
+<https://groups.io/g/nw-windtalk/topic/101450865#83571>

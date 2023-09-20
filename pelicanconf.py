@@ -7,7 +7,7 @@ from custom_jinja_filters import split, el, shuffle, markdown
 JINJA_FILTERS = {"split": split, "el": el, "shuffle": shuffle, "markdown": markdown}
 
 
-AUTHOR = "rrosen326@gmail.com"
+AUTHOR = ""
 SITENAME = "WA Boardsailing"
 SITEURL = ""
 

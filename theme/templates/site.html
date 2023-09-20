@@ -54,10 +54,12 @@
           <th>Webcam</th>
           <td>{{page.webcam | markdown}}</td>
         </tr>
+        {% if page.author | string | length > 0  %}
         <tr>
           <th>Author</th>
           <td><a href="mailto:{{page.author_email}}">{{page.author}}</a></td>
         </tr>
+        {% endif %}
       </tbody>
     </table>
   </div>
