@@ -8,6 +8,7 @@ level: beginner
 fee: Free
 parking: Ample
 launch: Pavement platform with turf (and goose poop!). Shallow and proteced.
+foiling: Good for foiling. No major hidden obstacles. You have to walk out a bit to get deep enough.
 forecast: <a href="https://wx.ikitesurf.com/spot/116695" target="_blank">iWindsurf</a>
 webcam: <a href="https://www.sailsandpoint.org/open-boating/current-conditions/" target="_blank">SSP</a>
 author: Ross Rosen

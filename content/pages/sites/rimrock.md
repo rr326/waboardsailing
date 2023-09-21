@@ -7,6 +7,7 @@ level: intermediate
 fee: $5/day / NW Forest Pass
 parking: Ample
 launch: No stumps or hazards
+foiling: Good for foiling. No major hidden obstacles.
 forecast: <a href="https://wx.ikitesurf.com/search/46.643/-121.201/11">iWindsurf</a>
 webcam:
 author:

@@ -57,6 +57,7 @@ level: intermediate
 fee: Free
 parking: Ample
 launch: Open grassy area followed by a small drop and rocky beach. Wind shadow when wind is westerly.
+foiling: Good for foiling. No major hidden obstacles.
 forecast: <a href="https://wx.ikitesurf.com/spot/116695" target="_blank">iWindsurf</a>
 webcam:
 author: Ross Rosen
