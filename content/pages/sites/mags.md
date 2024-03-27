@@ -8,7 +8,7 @@ fee: Free
 parking: Ample
 launch: Open grassy area followed by a small drop and rocky beach. Wind shadow when wind is westerly.
 foiling: Good for foiling.
-forecast: (see below)
+forecast: HRRR model (WRF is bad for southerlies)
 webcam: (none)
 author: Ross Rosen
 author_email: <cab_mall0n@icloud.com>
@@ -38,7 +38,11 @@ and there's plenty of land mass north of that.
 
 ## Forecasting
 
-TBD
+Use the HRRR model for southerlies, which is when mags is on. (WRF for notherlies, which is when SSP is on.)
+
+There is no perfect sensor for Mags.
+
+[Golden Gardens](https://wx.iwindsurf.com/spot/93975) has a good sensor, but tends to be windier.
 
 ## Advanced Topics
 
