@@ -16,7 +16,7 @@
             "name": "Nodejs: windmap",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceFolder}/windmap/index.js",            
+            "program": "${workspaceFolder}/windmap/index.mjs",            
         }
     ]
 }
