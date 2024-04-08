@@ -1,6 +1,7 @@
 .cache_ggshield
 .history/
 output/
-tmp/
+**/tmp/
 dist/
 content/pages/sites/test.md
+**/node_modules/*

@@ -8,5 +8,8 @@
     "run": "node index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-localstorage": "^3.0.5"
+  }
 }
