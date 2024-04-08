@@ -6,11 +6,17 @@
     "configurations": [
         {
             "name": "Python: Current File",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true
+        },
+        {
+            "name": "Nodejs: windmap",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/windmap/index.js",            
         }
     ]
 }
