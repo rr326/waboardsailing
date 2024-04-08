@@ -10,6 +10,9 @@ python = "^3.12"
 
 
 [tool.poetry.group.dev.dependencies]
+markdown = "^3.6"
+livereload = "^2.6.3"
+pelican-cleanurl = {git = "https://github.com/rr326/pelican-cleanurl.git"}
 pelican = "^4.9.1"
 invoke = "^2.2.0"
 
