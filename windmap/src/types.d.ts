@@ -1,4 +1,4 @@
-type Location = {
+type WindSite = {
     name: string
     url: string
 }

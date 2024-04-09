@@ -16,7 +16,12 @@
             "name": "Nodejs: windmap",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceFolder}/windmap/index.mjs",            
+            "cwd": "${workspaceFolder}/windmap",
+            "program": "./src/index.ts",  
+            "preLaunchTask": "tsc: build ",
+            "outFiles": [
+                "./dist/**/*.js"
+            ],          
         }
     ]
 }
