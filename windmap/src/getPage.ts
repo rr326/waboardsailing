@@ -1,6 +1,9 @@
 import puppeteer from "puppeteer"
 import * as cheerio from "cheerio"
 import { getLoggedinBrowser } from "./login.js"
+import { LocalStorage } from "node-localstorage"
+
+const localStorage = new LocalStorage("./windmap/tmp")
 
 async function fetchPageRaw(pageUrl: string) {
     let response = null,
@@ -77,7 +80,7 @@ function iWindsurfParsePage(html: string) {
     } as WeatherData
 }
 
-export async function parseHtml(html: string, url: string) {
+export function parseHtml(html: string, url: string) {
     if (url.startsWith("https://tempestwx.com")) {
         return tempestParsePage(html)
     } else if (

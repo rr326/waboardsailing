@@ -1,14 +1,7 @@
 import puppeteer, { Browser } from "puppeteer"
-import { LocalStorage } from "node-localstorage"
 import * as fs from "fs"
 import * as path from "path"
 import * as cheerio from "cheerio"
-
-// If I'm in a browser, it is already defined.
-var localStorage = localStorage || new LocalStorage("./windmap/tmp")
-
-const credentials = loadCredentials()
-console.log("credentials", credentials)
 
 function loadCredentials() {
     const credentialsPath = path.join(
@@ -25,6 +18,7 @@ function loadCredentials() {
 }
 
 async function loginiWindsurf(browser: Browser) {
+    const credentials = loadCredentials()
     const page = await browser.newPage()
     await page.goto("https://secure.iwindsurf.com/", {
         waitUntil: "networkidle0",
