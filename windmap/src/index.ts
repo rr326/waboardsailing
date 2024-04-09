@@ -1,14 +1,9 @@
 import puppeteer from "puppeteer"
-import cheerio from "cheerio"
-import { LocalStorage } from "node-localstorage"
-import * as fs from 'fs';
-import * as path from "path"
+import * as cheerio from 'cheerio'
+import { getLoggedinBrowser } from "./login.js"
 
-if (typeof localStorage === "undefined" || localStorage === null) {
-    var localStorage = new LocalStorage("./windmap/tmp")
-}
 
-async function fetchPageRaw(pageUrl) {
+async function fetchPageRaw(pageUrl: string) {
     let response = null,
         body = null
     console.log("fetching", pageUrl)
@@ -28,11 +23,8 @@ async function fetchPageRaw(pageUrl) {
     }
 }
 
-async function fetchPageJS(pageUrl) {
-    if (requiresLogin(pageUrl)) {
-        await loginSite(pageUrl)
-    }
-    const browser = await puppeteer.launch()
+async function fetchPageJS(pageUrl: string) {
+    const browser = await getLoggedinBrowser(pageUrl)
     const page = await browser.newPage()
     await page.goto(pageUrl, { waitUntil: "networkidle0" })
     await new Promise((r) => setTimeout(r, 1000)) // wait for JS to load. 1 s enough?
@@ -40,7 +32,7 @@ async function fetchPageJS(pageUrl) {
     return html
 }
 
-async function getPage(pageUrl, useCache = false) {
+async function getPage(pageUrl: string, useCache = false) {
     console.log("getpage", pageUrl)
     let page = localStorage.getItem(pageUrl)
     if (useCache && page) {
@@ -53,7 +45,8 @@ async function getPage(pageUrl, useCache = false) {
     return page
 }
 
-function tempestParsePage(html) {
+
+function tempestParsePage(html: string) {
     const $ = cheerio.load(html)
     let ccWind = $("#cc-wind")
     let windDirection = ccWind
@@ -69,10 +62,11 @@ function tempestParsePage(html) {
         windAvg: windAvg,
         pageTimestamp: pageTimestamp,
         rapidWindTimestamp: rapidWindTimestamp,
-    }
+    } as WeatherData
 }
 
-function iWindsurfParsePage(html) {
+
+function iWindsurfParsePage(html: string) {
     const $ = cheerio.load(html)
     let cc = $("#current-conditions .spot-info-container")
     if (cc.length == 0) {
@@ -83,55 +77,13 @@ function iWindsurfParsePage(html) {
         windAvg: windAvg,
         pageTimestamp: pageTimestamp,
         rapidWindTimestamp: rapidWindTimestamp,
-    }
+    } as WeatherData
 }
 
-async function loginiWindsurf() {
-    const browser = await puppeteer.launch({ headless: false })
-    const page = await browser.newPage()
-    await page.goto("https://secure.iwindsurf.com/", {
-        waitUntil: "networkidle0",
-    })
-    let html = await page.content()
-    await page.waitForSelector("#login-username")
-    await page.type("#login-username", credentials.iwindsurf.username)
-    await page.waitForSelector("#login-password")
-    await page.type("#login-password", credentials.iwindsurf.password)
 
-    await Promise.all([
-        await page.click("input[type=submit]"),
-        await page.waitForNavigation({ waitUntil: 'networkidle0' }) 
-      ]);    
 
-    // Now confirm
-    let newContent = await page.content()
-    let $ = cheerio.load(newContent)
-    let username = $("#login-password")
-    if (username.length == 0) {
-        console.log("Login succeeded.")
-        return true
-    } else {
-        console.error("Login FAILED")
-        return false
-    }
-}
 
-async function loginSite(url) {
-    if (url.startsWith("https://wx.iwindsurf.com")) {
-        return loginiWindsurf()
-    } else {
-        throw new Error("Unknown URL to login: " + url)
-    }
-}
-
-function requiresLogin(url) {
-    return (
-        url.startsWith("https://wx.ikitesurf.com") ||
-        url.startsWith("https://wx.iwindsurf.com")
-    )
-}
-
-async function parseHtml(html, url) {
+async function parseHtml(html: string, url: string) {
     if (url.startsWith("https://tempestwx.com")) {
         return tempestParsePage(html)
     } else if (
@@ -144,7 +96,7 @@ async function parseHtml(html, url) {
     }
 }
 
-async function main(locations) {
+async function main(locations: Location[]) {
     for await (const location of locations) {
         let html = await getPage(location.url, false)
         let windData = parseHtml(html, location.url)
@@ -152,7 +104,9 @@ async function main(locations) {
     }
 }
 
-let locations = [
+
+
+let locations: Location[] = [
     //{name: 'Waverlyish', url: 'https://tempestwx.com/station/105376/'},
     {
         name: "Golden Gardens Light 2",
@@ -160,22 +114,10 @@ let locations = [
     },
 ]
 
-function loadCredentials() {
-    const credentialsPath = path.join("/Users/rrosen/dev/waboardsailing/windmap/.credentials.json") 
-
-    try {
-        const credentialsData = fs.readFileSync(credentialsPath, "utf-8")
-        return JSON.parse(credentialsData)
-    } catch (error) {
-        console.error("Error loading credentials file:", error)
-        return null // Or handle the error differently
-    }
-}
 
 // main()
 console.log("windmap/index.js running!")
-const credentials = loadCredentials()
-console.log("credentials", credentials)
+
 
 await main(locations)
 console.log("windmap/index.js done!")
