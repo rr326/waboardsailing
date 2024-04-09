@@ -18,10 +18,24 @@
             "request": "launch",
             "cwd": "${workspaceFolder}/windmap",
             "program": "./src/index.ts",  
-            "preLaunchTask": "tsc: build ",
+            "runtimeExecutable": "tsx",
+            "skipFiles": ["<node_internals>/**", "node_modules/**"],     
+            "stopOnEntry": true
+        },        
+        {
+            "name": "XX - OLD Typescript - Not working",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/windmap",
+            "program": "./src/index.ts",  
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
             "outFiles": [
                 "./dist/**/*.js"
             ],          
-        }
+            "stopOnEntry": true
+        },
     ]
 }

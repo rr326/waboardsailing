@@ -5,7 +5,7 @@ import * as path from "path"
 import * as cheerio from "cheerio"
 
 // If I'm in a browser, it is already defined.
-localStorage = localStorage || new LocalStorage("./windmap/tmp")
+var localStorage = localStorage || new LocalStorage("./windmap/tmp")
 
 const credentials = loadCredentials()
 console.log("credentials", credentials)

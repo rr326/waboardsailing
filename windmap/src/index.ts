@@ -1,4 +1,4 @@
-import { getPage, parseHtml } from './getPage.js'
+import { getPage, parseHtml } from "./getPage.js"
 
 async function main(locations: WindSite[]) {
     for await (const location of locations) {
@@ -8,11 +8,10 @@ async function main(locations: WindSite[]) {
     }
 }
 
-
 let locations: WindSite[] = [
     {
-        name: 'Waverlyish', 
-        url: 'https://tempestwx.com/station/105376/'
+        name: "Waverlyish",
+        url: "https://tempestwx.com/station/105376/",
     },
     // {
     //     name: "Golden Gardens Light 2",
