@@ -1,9 +1,8 @@
 import puppeteer, { Browser } from "puppeteer"
 import { LocalStorage } from "node-localstorage"
-import * as fs from 'fs';
+import * as fs from "fs"
 import * as path from "path"
-import * as cheerio from 'cheerio'
-
+import * as cheerio from "cheerio"
 
 // If I'm in a browser, it is already defined.
 localStorage = localStorage || new LocalStorage("./windmap/tmp")
@@ -12,7 +11,9 @@ const credentials = loadCredentials()
 console.log("credentials", credentials)
 
 function loadCredentials() {
-    const credentialsPath = path.join("/Users/rrosen/dev/waboardsailing/windmap/.credentials.json")
+    const credentialsPath = path.join(
+        "/Users/rrosen/dev/waboardsailing/windmap/.credentials.json",
+    )
 
     try {
         const credentialsData = fs.readFileSync(credentialsPath, "utf-8")
@@ -36,8 +37,8 @@ async function loginiWindsurf(browser: Browser) {
 
     await Promise.all([
         await page.click("input[type=submit]"),
-        await page.waitForNavigation({ waitUntil: 'networkidle0' })
-    ]);
+        await page.waitForNavigation({ waitUntil: "networkidle0" }),
+    ])
 
     // Now confirm
     let newContent = await page.content()
@@ -67,7 +68,10 @@ function requiresLogin(url: string) {
     )
 }
 
-export async function getLoggedinBrowser(url: string, headless = true): Promise<Browser> {
+export async function getLoggedinBrowser(
+    url: string,
+    headless = true,
+): Promise<Browser> {
     let browser = await puppeteer.launch({ headless: headless })
 
     if (requiresLogin(url)) {

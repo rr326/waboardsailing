@@ -1,7 +1,6 @@
 import puppeteer from "puppeteer"
-import * as cheerio from 'cheerio'
+import * as cheerio from "cheerio"
 import { getLoggedinBrowser } from "./login.js"
-
 
 async function fetchPageRaw(pageUrl: string) {
     let response = null,
@@ -45,7 +44,6 @@ async function getPage(pageUrl: string, useCache = false) {
     return page
 }
 
-
 function tempestParsePage(html: string) {
     const $ = cheerio.load(html)
     let ccWind = $("#cc-wind")
@@ -65,7 +63,6 @@ function tempestParsePage(html: string) {
     } as WeatherData
 }
 
-
 function iWindsurfParsePage(html: string) {
     const $ = cheerio.load(html)
     let cc = $("#current-conditions .spot-info-container")
@@ -79,9 +76,6 @@ function iWindsurfParsePage(html: string) {
         rapidWindTimestamp: rapidWindTimestamp,
     } as WeatherData
 }
-
-
-
 
 async function parseHtml(html: string, url: string) {
     if (url.startsWith("https://tempestwx.com")) {
@@ -104,8 +98,6 @@ async function main(locations: Location[]) {
     }
 }
 
-
-
 let locations: Location[] = [
     //{name: 'Waverlyish', url: 'https://tempestwx.com/station/105376/'},
     {
@@ -114,10 +106,8 @@ let locations: Location[] = [
     },
 ]
 
-
 // main()
 console.log("windmap/index.js running!")
-
 
 await main(locations)
 console.log("windmap/index.js done!")
