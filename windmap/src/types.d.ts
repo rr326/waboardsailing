@@ -5,8 +5,10 @@ type WindSite = {
 
 // TODO: Cast these to appropriate types
 interface WeatherData {
-    windDirection: string | number
-    windAvg: string | number
-    pageTimestamp: string | number | Date
-    rapidWindTimestamp: string | number | Date
+    windDirection:  number
+    windAvg: number
+    windSpeedText: string
+    pageTimestamp: Date
+    dataTimestamp: Date
+    [extraProp: string]: any
 }

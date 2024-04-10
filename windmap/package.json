@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "main": "tsc || node dist/index.js",
+        "main": "tsc ; node dist/index.js",
         "tsc": "tsc --watch",
         "clean": "npx prettier . --write"
     },
@@ -14,6 +14,7 @@
     "license": "ISC",
     "dependencies": {
         "cheerio": "^1.0.0-rc.12",
+        "date-fns": "^3.6.0",
         "node-localstorage": "^3.0.5",
         "puppeteer": "^22.6.3"
     },

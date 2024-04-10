@@ -2,6 +2,8 @@ import puppeteer from "puppeteer"
 import * as cheerio from "cheerio"
 import { getLoggedinBrowser } from "./login.js"
 import { LocalStorage } from "node-localstorage"
+import { parse as parseDate } from 'date-fns'
+
 
 const localStorage = new LocalStorage("./windmap/tmp")
 
@@ -26,11 +28,12 @@ async function fetchPageRaw(pageUrl: string) {
 }
 
 async function fetchPageJS(pageUrl: string) {
-    const browser = await getLoggedinBrowser(pageUrl)
-    const page = await browser.newPage()
+    const [browser, page] = await getLoggedinBrowser(pageUrl)
     await page.goto(pageUrl, { waitUntil: "networkidle0" })
-    await new Promise((r) => setTimeout(r, 1000)) // wait for JS to load. 1 s enough?
+    
+    // await new Promise((r) => setTimeout(r, 1000)) // wait for JS to load. 1 s enough?
     let html = await page.content()
+    await browser.close();
     return html
 }
 
@@ -72,11 +75,17 @@ function iWindsurfParsePage(html: string) {
     if (cc.length == 0) {
         throw new Error("No current conditions found - must be logged in!")
     }
+    let dateText = cc.find('div .jw-cc-data-date').text()
+    let speedText = cc.find('div .jw-cc-data-speed').text()
+    let speedMatch = speedText.match(/(\d+)\s(mph|)\s([a-zA-Z]+)\s\((.+)°\)/)
+    let date = parseDate(dateText, 'd MMM h:mma', new Date())
+
     return {
-        windDirection: windDirection,
-        windAvg: windAvg,
-        pageTimestamp: pageTimestamp,
-        rapidWindTimestamp: rapidWindTimestamp,
+        windDirection: parseInt(speedMatch[4]),
+        windAvg: parseInt(speedMatch[1]),
+        windSpeedText : speedText,
+        pageTimestamp: new Date(),
+        dataTimestamp: date,
     } as WeatherData
 }
 

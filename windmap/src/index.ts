@@ -9,14 +9,14 @@ async function main(locations: WindSite[]) {
 }
 
 let locations: WindSite[] = [
-    {
-        name: "Waverlyish",
-        url: "https://tempestwx.com/station/105376/",
-    },
     // {
-    //     name: "Golden Gardens Light 2",
-    //     url: "https://wx.iwindsurf.com/spot/93975"
-    // }
+    //     name: "Waverlyish",
+    //     url: "https://tempestwx.com/station/105376/",
+    // },
+    {
+        name: "Golden Gardens Light 2",
+        url: "https://wx.ikitesurf.com/spot/93975"
+    }
 ]
 
 // main()
