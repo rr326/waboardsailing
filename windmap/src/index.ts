@@ -15,8 +15,8 @@ let locations: WindSite[] = [
     // },
     {
         name: "Golden Gardens Light 2",
-        url: "https://wx.ikitesurf.com/spot/93975"
-    }
+        url: "https://wx.ikitesurf.com/spot/93975",
+    },
 ]
 
 // main()
