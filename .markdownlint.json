@@ -2,4 +2,13 @@
   "MD013": false,
   "MD041": false,
   "MD033": false,
+  "list-marker-space": {
+    "ul_multi": 3,
+    "ul_single": 3
+  },
+  "ul-indent": {
+    "indent": 4
+  },
+  "ross_documentation": "Ugg- prettier is the default formatter for markdown and it does not allow a lot of customization. Doing it this way allows prettier to use its defaults and markdownlint to not complain.",
+  "comment": "https://github.com/DavidAnson/markdownlint/blob/main/style/prettier.json - disable rules that conflict with preetier"
 }

@@ -26,6 +26,12 @@ I _might_ even be able to find a way to scrape on the client side. But I doubt i
 -   Then, separately a server to serve the data
 -   Then a webpage that displays the data
 
+## Javascript + Python
+
+-   I'm going to leave the scraper in typescript.
+-   Obviously front end code will be in javascript.
+-   Everything else will be python. EG: the server.
+
 ## Scraper
 
 ```typescript
