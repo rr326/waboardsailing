@@ -9,10 +9,6 @@ export class iKitesurfProcessor extends SiteProcessor {
     )
     requiresLogin: boolean = true
 
-    constructor() {
-        super()
-    }
-
     parseHtml(html: string): WeatherData {
         const $ = cheerio.load(html)
         let cc = $("#current-conditions .spot-info-container")

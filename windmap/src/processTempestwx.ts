@@ -9,10 +9,6 @@ export class TempestwxProcessor extends SiteProcessor {
     urlRegex: RegExp = new RegExp("^https://tempestwx.com")
     requiresLogin: boolean = false
 
-    constructor() {
-        super()
-    }
-
     /**
      * Customize these functions
      */

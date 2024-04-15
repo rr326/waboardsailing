@@ -1,9 +1,12 @@
 import { iKitesurfProcessor } from "./processiKitesurf.js"
 import { TempestwxProcessor } from "./processTempestwx.js"
-import yargs from "yargs/yargs"
+import { cli } from "./cli.js"
 
-async function main(locations: WindSite[]) {
-    let pageProcessors = [new iKitesurfProcessor(), new TempestwxProcessor()]
+async function main(locations: WindSite[], debug: boolean, cache: boolean) {
+    let pageProcessors = [
+        new iKitesurfProcessor(debug, cache),
+        new TempestwxProcessor(debug, cache),
+    ]
 
     for await (const location of locations) {
         for (const processor of pageProcessors) {
@@ -20,10 +23,10 @@ async function main(locations: WindSite[]) {
 }
 
 let locations: WindSite[] = [
-    // {
-    //     name: "Waverlyish",
-    //     url: "https://tempestwx.com/station/105376/",
-    // },
+    {
+        name: "Waverlyish",
+        url: "https://tempestwx.com/station/105376/",
+    },
     {
         name: "Golden Gardens Light 2",
         url: "https://wx.ikitesurf.com/spot/93975",
@@ -32,22 +35,8 @@ let locations: WindSite[] = [
 
 // main()
 console.log("windmap/main.js running!")
+let argv = cli()
+console.log("Command line arguments:", argv)
 
-yargs(process.argv.slice(2))
-    .scriptName("pirate-parser")
-    .usage('$0 <cmd> [args]')
-    .command('hello [name]', 'welcome ter yargs!', (yargs) => {
-    yargs.positional('name', {
-        type: 'string',
-        default: 'Cambi',
-        describe: 'the name to say hello to'
-    })
-    }, function (argv) {
-    console.log('hello', argv.name, 'welcome to yargs!')
-    })
-    .help()
-    .argv
-
-
-// await main(locations)
+await main(locations, argv.debug, argv.cache)
 console.log("windmap/main.js done!")

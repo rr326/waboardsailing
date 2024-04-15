@@ -8,8 +8,13 @@ const localStorage = new LocalStorage("./tmp")
 export class SiteProcessor {
     urlRegex: RegExp = new RegExp("^https://")
     requiresLogin: boolean = false
+    debug: boolean
+    useCache: boolean
 
-    constructor() {}
+    constructor(debug: boolean, useCache: boolean) {
+        this.debug = debug
+        this.useCache = useCache
+    }
 
     /**
      * Customize these functions
@@ -80,10 +85,10 @@ export class SiteProcessor {
         return html
     }
 
-    async _getPage(pageUrl: string, useCache = false) {
+    async _getPage(pageUrl: string) {
         console.log("getpage", pageUrl)
         let page = localStorage.getItem(pageUrl)
-        if (useCache && page) {
+        if (this.useCache && page) {
             console.log("got page from local storage", pageUrl)
         } else {
             page = await this._fetchPageJS(pageUrl)
