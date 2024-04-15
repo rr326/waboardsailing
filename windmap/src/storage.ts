@@ -96,11 +96,7 @@ export async function getDB(debugLogging = false): Promise<Sequelize> {
     return sequelize
 }
 
-export async function storeWindData(
-    db: Sequelize,
-    location: string,
-    data: WeatherData,
-) {
+export async function storeWindData(location: string, data: WeatherData) {
     return await WindData.create({
         locationName: location,
         windDirection: data.windDirection,

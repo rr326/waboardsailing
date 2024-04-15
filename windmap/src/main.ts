@@ -6,12 +6,7 @@ import { getConfig } from "./config.js"
 import { getDB, storeWindData, debugQueries } from "./storage.js"
 import { Sequelize } from "sequelize"
 
-async function main(
-    db: Sequelize,
-    locations: WindSite[],
-    debug: boolean,
-    cache: boolean,
-) {
+async function main(locations: WindSite[], debug: boolean, cache: boolean) {
     let pageProcessors = [
         new iKitesurfProcessor(debug, cache),
         new TempestwxProcessor(debug, cache),
@@ -26,7 +21,7 @@ async function main(
                     windData,
                 )
                 if (windData) {
-                    await storeWindData(db, location.name, windData)
+                    await storeWindData(location.name, windData)
                     logger.debug("Stored wind data in db")
                 }
             }
@@ -49,7 +44,7 @@ setLoglevel(argv.debug ? "debug" : "info")
 logger.debug("Command line arguments: %O", argv)
 let db = await getDB(false)
 
-await main(db, locations, argv.debug, argv.cache)
+await main(locations, argv.debug, argv.cache)
 
 await debugQueries()
 
