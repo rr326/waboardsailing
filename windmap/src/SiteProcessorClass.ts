@@ -105,7 +105,7 @@ export class SiteProcessor {
         url: string,
         headless = false,
     ): Promise<[Browser, Page]> {
-        let browser = await puppeteer.launch({ headless: headless })
+        let browser = await puppeteer.launch({ headless: (headless || !this.debug) })
         let page = await browser.newPage()
 
         if (this.requiresLogin) {

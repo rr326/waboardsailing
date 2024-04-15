@@ -2,11 +2,8 @@
 
 ## TODO
 
--   fetchpage - useCach - use global debug value or at least send parameter
 -   switch from LocalStorage to somethign else
--   rename index.ts to main.ts
 -   extract WindSite to its own file
--   headless
 -   logging - to file
 
 ## Typescript / VSCode debuging

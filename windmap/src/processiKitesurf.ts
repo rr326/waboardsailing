@@ -77,7 +77,7 @@ export class iKitesurfProcessor extends SiteProcessor {
         for (let i = 0; i < 2; i++) {
             await this._loginiWindsurf(page)
             if (await this._isLoggediniWindsurf(page)) {
-                logger.info("Login succeeded.")
+                logger.info("iWindsurf: Login succeeded.")
                 return true
             }
         }
