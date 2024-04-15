@@ -48,14 +48,21 @@ function initModels(sequelize: Sequelize) {
     )
 }
 
+async function initDB(debugLogging: boolean) {
+    let dbLogger = null
+    if (debugLogging) {
+        dbLogger = (msg: string) => logger.debug(msg)
+        //logger.debug.bind(logger), // Displays all messages
+    } else {
+        dbLogger = (msg: string) => {}
+    }
 
-async function initDB() {
     if (!sequelize) {
         // Initialize only if not already connected
         sequelize = new Sequelize({
             dialect: "sqlite",
             storage: "./db.sqlite3",
-            logging: logger.debug.bind(logger)
+            logging: dbLogger,
         })
 
         initModels(sequelize)
@@ -69,7 +76,21 @@ async function initDB() {
     }
 }
 
-export function getDB() {
-    initDB() // Ensure initialization on every call
+export function getDB(debugLogging = false): Sequelize {
+    initDB(debugLogging) // Ensure initialization on every call
     return sequelize
+}
+
+export async function storeWindData(
+    db: Sequelize,
+    location: string,
+    data: WeatherData,
+) {
+    return await WindData.create({
+        locationName: location,
+        windDirection: data.windDirection,
+        windAvg: data.windAvg,
+        pageTimestamp: data.pageTimestamp,
+        dataTimestamp: data.dataTimestamp,
+    })
 }

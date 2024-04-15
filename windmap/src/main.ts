@@ -3,9 +3,15 @@ import { TempestwxProcessor } from "./processTempestwx.js"
 import { cli } from "./cli.js"
 import { setLoglevel, logger } from "./logging.js"
 import { getConfig } from "./config.js"
-import {getDB} from "./storage.js"
+import { getDB, storeWindData } from "./storage.js"
+import { Sequelize } from "sequelize"
 
-async function main(locations: WindSite[], debug: boolean, cache: boolean) {
+async function main(
+    db: Sequelize,
+    locations: WindSite[],
+    debug: boolean,
+    cache: boolean,
+) {
     let pageProcessors = [
         new iKitesurfProcessor(debug, cache),
         new TempestwxProcessor(debug, cache),
@@ -19,6 +25,10 @@ async function main(locations: WindSite[], debug: boolean, cache: boolean) {
                     `Processed: ${processor.constructor.name}\nLocation: ${location.name}\n%O`,
                     windData,
                 )
+                if (windData) {
+                    await storeWindData(db, location.name, windData)
+                    logger.debug("Stored wind data in db")
+                }
             }
         }
     }
@@ -37,7 +47,7 @@ logger.debug("config: %O", config)
 
 setLoglevel(argv.debug ? "debug" : "info")
 logger.debug("Command line arguments: %O", argv)
-let db = getDB()
+let db = getDB(false)
 
-//await main(locations, argv.debug, argv.cache)
+await main(db, locations, argv.debug, argv.cache)
 logger.info("windmap complete")
