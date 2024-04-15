@@ -1,15 +1,12 @@
-import puppeteer, { Browser, Page } from "puppeteer"
+import { Browser, Page } from "puppeteer"
 import * as cheerio from "cheerio"
 import { LocalStorage } from "node-localstorage"
-import { parse as parseDate } from "date-fns"
-import * as fs from "fs"
-import * as path from "path"
 import { SiteProcessor } from "./SiteProcessorClass.js"
 
 const localStorage = new LocalStorage("./tmp")
 
 export class TempestwxProcessor extends SiteProcessor {
-    urlRegex: RegExp = new RegExp("^https://")
+    urlRegex: RegExp = new RegExp("^https://tempestwx.com")
     requiresLogin: boolean = false
 
     constructor() {
@@ -29,11 +26,7 @@ export class TempestwxProcessor extends SiteProcessor {
         throw new Error("Not implemented")
     }
 
-
-
     parseHtml(html: string): WeatherData {
-        console.debug("Parsing html: ", html)
-
         const $ = cheerio.load(html)
         let ccWind = $("#cc-wind")
         let windDirection = ccWind
@@ -49,7 +42,9 @@ export class TempestwxProcessor extends SiteProcessor {
             windAvg: parseInt(windAvg),
             windSpeedText: windAvg,
             pageTimestamp: new Date(),
-            dataTimestamp: rapidWindTimestamp && new Date(parseInt(rapidWindTimestamp)*1000),
+            dataTimestamp:
+                rapidWindTimestamp &&
+                new Date(parseInt(rapidWindTimestamp) * 1000),
         } as WeatherData
-    }    
+    }
 }

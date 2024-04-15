@@ -1,7 +1,5 @@
 import puppeteer, { Browser, Page } from "puppeteer"
-import * as cheerio from "cheerio"
 import { LocalStorage } from "node-localstorage"
-import { parse as parseDate } from "date-fns"
 import * as fs from "fs"
 import * as path from "path"
 
@@ -26,10 +24,7 @@ export class SiteProcessor {
         throw new Error("Not implemented")
     }
 
-
-
     parseHtml(html: string): WeatherData {
-        console.debug("Parsing html: ", html)
         let data: WeatherData = {
             windDirection: 0,
             windAvg: 0,
@@ -46,7 +41,7 @@ export class SiteProcessor {
     async fetchPage(url: string): Promise<string> {
         console.debug("Fetching page: ", url)
         return await this._getPage(url)
-    }    
+    }
 
     handleUrl(url: string): boolean {
         console.debug(

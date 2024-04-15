@@ -6,6 +6,7 @@
 -   switch from LocalStorage to somethign else
 -   rename index.ts to main.ts
 -   extract WindSite to its own file
+-   headless
 
 ## Typescript / VSCode debuging
 

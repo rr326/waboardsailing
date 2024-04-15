@@ -1,10 +1,7 @@
 import { SiteProcessor } from "./SiteProcessorClass.js"
-import puppeteer, { Browser, Page } from "puppeteer"
+import { Browser, Page } from "puppeteer"
 import * as cheerio from "cheerio"
-import { LocalStorage } from "node-localstorage"
 import { parse as parseDate } from "date-fns"
-import * as fs from "fs"
-import * as path from "path"
 
 export class iKitesurfProcessor extends SiteProcessor {
     urlRegex: RegExp = new RegExp(
@@ -17,8 +14,6 @@ export class iKitesurfProcessor extends SiteProcessor {
     }
 
     parseHtml(html: string): WeatherData {
-        console.log("Parsing html: ", html)
-
         const $ = cheerio.load(html)
         let cc = $("#current-conditions .spot-info-container")
         if (cc.length == 0) {

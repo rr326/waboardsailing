@@ -8,7 +8,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "main": "tsc ; node dist/index.js",
         "tsc": "tsc --watch",
-        "clean": "npx prettier . --write"
+        "clean": "npx prettier ./src --write"
     },
     "author": "",
     "license": "ISC",
