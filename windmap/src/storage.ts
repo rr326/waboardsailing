@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes, Model } from "sequelize"
+import { Sequelize, DataTypes, Model, Op } from "sequelize"
 import { logger } from "./logging.js"
 
 let sequelize: Sequelize // Store the connection instance
@@ -44,6 +44,21 @@ function initModels(sequelize: Sequelize) {
         {
             sequelize,
             modelName: "WindData",
+            indexes: [
+                {
+                    unique: false,
+                    fields: ["locationName"],
+                },
+                {
+                    unique: false,
+                    fields: ["dataTimestamp"],
+                },
+                {
+                    name: "location_data_timestamp_index",
+                    unique: false,
+                    fields: ["locationName", "dataTimestamp"],
+                }
+            ]
         },
     )
 }
@@ -54,7 +69,7 @@ async function initDB(debugLogging: boolean) {
         dbLogger = (msg: string) => logger.debug(msg)
         //logger.debug.bind(logger), // Displays all messages
     } else {
-        dbLogger = (msg: string) => {}
+        dbLogger = (msg: string) => { }
     }
 
     if (!sequelize) {
@@ -69,15 +84,15 @@ async function initDB(debugLogging: boolean) {
         try {
             await sequelize.authenticate()
             await sequelize.sync({ alter: true })
-            console.log("Database connected and synchronized")
+            logger.debug("Database connected and synchronized")
         } catch (error) {
-            console.error("Error connecting or synchronizing:", error)
+            logger.error("Error connecting or synchronizing: %O", error)
         }
     }
 }
 
-export function getDB(debugLogging = false): Sequelize {
-    initDB(debugLogging) // Ensure initialization on every call
+export async function getDB(debugLogging = false): Promise<Sequelize> {
+    await initDB(debugLogging) // Ensure initialization on every call
     return sequelize
 }
 
@@ -93,4 +108,38 @@ export async function storeWindData(
         pageTimestamp: data.pageTimestamp,
         dataTimestamp: data.dataTimestamp,
     })
+}
+
+export async function getWindData() {
+    let data = await WindData.findAll({
+        order: [
+            ["locationName", "ASC"],
+            ["dataTimestamp", "DESC"],
+            ["createdAt", "DESC"]
+        ],
+    })
+    return data
+}
+
+export async function getLastestEachLocation(maxAge: number = 3600) {
+    /**
+     * Get the latest data for each location
+     * @param maxAge - The maximum age of the data in seconds
+     * 
+     * returns max 1 record per location
+     */
+    let data = await WindData.findAll({
+        where: {
+            dataTimestamp: {
+                [Op.gt]: new Date(Date.now() - maxAge * 1000),
+            },
+        },
+        order: [
+            // ["locationName", "ASC"],
+            ["dataTimestamp", "DESC"],
+            ["createdAt", "DESC"]
+        ],
+        group: ['locationName'], 
+    })
+    return data
 }

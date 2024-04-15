@@ -3,7 +3,7 @@ import { TempestwxProcessor } from "./processTempestwx.js"
 import { cli } from "./cli.js"
 import { setLoglevel, logger } from "./logging.js"
 import { getConfig } from "./config.js"
-import { getDB, storeWindData } from "./storage.js"
+import { getDB, storeWindData, getWindData, getLastestEachLocation } from "./storage.js"
 import { Sequelize } from "sequelize"
 
 async function main(
@@ -47,7 +47,12 @@ logger.debug("config: %O", config)
 
 setLoglevel(argv.debug ? "debug" : "info")
 logger.debug("Command line arguments: %O", argv)
-let db = getDB(false)
+let db = await getDB(true)
 
 await main(db, locations, argv.debug, argv.cache)
+let allRecords = await getWindData()
+console.log(JSON.stringify(allRecords, null, 4))
+let latest = await getLastestEachLocation(100000000)
+console.log(JSON.stringify(latest, null, 4))
+await db.close()
 logger.info("windmap complete")
