@@ -45,14 +45,14 @@ export class SiteProcessor {
      */
 
     async fetchPage(url: string): Promise<string> {
-        logger.debug("Fetching page: ", url)
+        logger.debug("Fetching page: %s", url)
         return await this._getPage(url)
     }
 
     handleUrl(url: string): boolean {
-        logger.debug(
-            `${this.constructor.name}.handleUrl(): (${url}) => (${this.urlRegex.test(url)})`,
-        )
+        // logger.debug(
+        //     `${this.constructor.name}.handleUrl(): (${url}) => (${this.urlRegex.test(url)})`,
+        // )
         return this.urlRegex.test(url)
     }
 
@@ -70,7 +70,7 @@ export class SiteProcessor {
                 throw new Error("Network response was not ok.")
             }
         } catch (error) {
-            logger.error(`Error fetching ${error}`)
+            logger.error("Error fetching %O", error)
         } finally {
             return body
         }
@@ -87,15 +87,15 @@ export class SiteProcessor {
     }
 
     async _getPage(pageUrl: string) {
-        logger.info(`getpage ${pageUrl}`)
+        logger.debug(`getpage(): ${pageUrl}`)
         let page = localStorage.getItem(pageUrl)
         if (this.useCache && page) {
-            logger.info(`got page from local storage ${pageUrl}`)
+            logger.debug(`from local storage - ${pageUrl}`)
         } else {
             page = await this._fetchPageJS(pageUrl)
             localStorage.setItem(pageUrl, page)
-            logger.info(
-                `got page from fetch and saved to local storage: ${pageUrl}`,
+            logger.debug(
+                `fetched and saved to local storage - ${pageUrl}`,
             )
         }
         return page
@@ -120,12 +120,12 @@ export class SiteProcessor {
     async processPage(url: string): Promise<WeatherData | null> {
         if (this.handleUrl(url)) {
             try {
-                logger.debug("Processing page: ", url)
+                logger.debug("Processing page: %s", url)
                 let html = await this.fetchPage(url)
                 let data = this.parseHtml(html)
                 return data
             } catch (e) {
-                logger.error(`Error processing page: ${url} - ${e}`)
+                logger.error(`Error processing page: ${url} - %O`, e)
                 return null
             }
         } else {
@@ -142,7 +142,7 @@ export class SiteProcessor {
             const credentialsData = fs.readFileSync(credentialsPath, "utf-8")
             return JSON.parse(credentialsData)
         } catch (error) {
-            logger.error(`Error loading credentials file: ${error}`)
+            logger.error(`Error loading credentials file: %O`, error)
             return null // Or handle the error differently
         }
     }

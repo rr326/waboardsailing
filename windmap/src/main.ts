@@ -14,7 +14,7 @@ async function main(locations: WindSite[], debug: boolean, cache: boolean) {
             if (processor.handleUrl(location.url)) {
                 let windData = await processor.processPage(location.url)
                 logger.info(
-                    `Back from ${processor.constructor.name}.processPage(): ${location.name} - ${windData}`,
+                    `Processed: ${processor.constructor.name}\nLocation: ${location.name}\n%O`, windData,
                 )
             }
         }
@@ -33,10 +33,10 @@ let locations: WindSite[] = [
 ]
 
 // main()
-logger.info("windmap/main.js running!")
+logger.info("windmap running")
 let argv = cli()
 setLoglevel(argv.debug ? "debug" : "info")
-logger.info(`Command line arguments: ${argv}`)
+logger.debug("Command line arguments: %O", argv)
 
 await main(locations, argv.debug, argv.cache)
-logger.info("windmap/main.js done!")
+logger.info("windmap complete")
