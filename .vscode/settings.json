@@ -1,4 +1,10 @@
 {
     "markdown.extension.toc.unorderedList.marker": "*",
-    "javascript.suggestionActions.enabled": false
+    "javascript.suggestionActions.enabled": false,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.history": true,
+        "**/.ipynb_checkpoints": true,
+        "**/node_modules": true
+    }
 }
