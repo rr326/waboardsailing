@@ -26,10 +26,7 @@ export class SiteProcessor {
         throw new Error("Not implemented")
     }
 
-    async fetchPage(url: string): Promise<string> {
-        console.debug("Fetching page: ", url)
-        return "html"
-    }
+
 
     parseHtml(html: string): WeatherData {
         console.debug("Parsing html: ", html)
@@ -45,6 +42,11 @@ export class SiteProcessor {
     /**
      * Support functions
      */
+
+    async fetchPage(url: string): Promise<string> {
+        console.debug("Fetching page: ", url)
+        return await this._getPage(url)
+    }    
 
     handleUrl(url: string): boolean {
         console.debug(

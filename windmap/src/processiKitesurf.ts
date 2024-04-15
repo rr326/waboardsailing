@@ -10,14 +10,10 @@ export class iKitesurfProcessor extends SiteProcessor {
     urlRegex: RegExp = new RegExp(
         "^https://(wx.ikitesurf.com|wx.iwindsurf.com)",
     )
+    requiresLogin: boolean = true
 
     constructor() {
         super()
-    }
-
-    async fetchPage(url: string): Promise<string> {
-        console.log("Fetching page: ", url)
-        return "html"
     }
 
     parseHtml(html: string): WeatherData {

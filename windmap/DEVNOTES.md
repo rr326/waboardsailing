@@ -1,5 +1,11 @@
 # DEVNOTES
 
+## TODO
+
+-   fetchpage - useCach - use global debug value or at least send parameter
+-   switch from LocalStorage to somethign else
+-
+
 ## Typescript / VSCode debuging
 
 -   Getting vscode to properly run and debug typescript was a huge pain!

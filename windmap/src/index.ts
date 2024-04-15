@@ -1,10 +1,15 @@
-import { getPage, parseHtml } from "./getPage.js"
+import { iKitesurfProcessor } from "./processiKitesurf.js"
+
 
 async function main(locations: WindSite[]) {
+    let pageProcessors = [new iKitesurfProcessor()]
+
     for await (const location of locations) {
-        let html = await getPage(location.url, false)
-        let windData = parseHtml(html, location.url)
-        console.log("Back from getPage: ", location.name, windData)
+        for (const processor of pageProcessors) {
+            let windData = await processor.processPage(location.url)
+            console.log(`Back from ${processor.constructor.name}.processPage(): `, location.name, windData)
+        }
+
     }
 }
 
