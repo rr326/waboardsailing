@@ -1,6 +1,7 @@
 import { iKitesurfProcessor } from "./processiKitesurf.js"
 import { TempestwxProcessor } from "./processTempestwx.js"
 import { cli } from "./cli.js"
+import { setLoglevel, logger } from "./logging.js"
 
 async function main(locations: WindSite[], debug: boolean, cache: boolean) {
     let pageProcessors = [
@@ -12,10 +13,8 @@ async function main(locations: WindSite[], debug: boolean, cache: boolean) {
         for (const processor of pageProcessors) {
             if (processor.handleUrl(location.url)) {
                 let windData = await processor.processPage(location.url)
-                console.log(
-                    `Back from ${processor.constructor.name}.processPage(): `,
-                    location.name,
-                    windData,
+                logger.info(
+                    `Back from ${processor.constructor.name}.processPage(): ${location.name} - ${windData}`,
                 )
             }
         }
@@ -34,9 +33,10 @@ let locations: WindSite[] = [
 ]
 
 // main()
-console.log("windmap/main.js running!")
+logger.info("windmap/main.js running!")
 let argv = cli()
-console.log("Command line arguments:", argv)
+setLoglevel(argv.debug ? "debug" : "info")
+logger.info(`Command line arguments: ${argv}`)
 
 await main(locations, argv.debug, argv.cache)
-console.log("windmap/main.js done!")
+logger.info("windmap/main.js done!")

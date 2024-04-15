@@ -2,6 +2,7 @@ import { SiteProcessor } from "./SiteProcessorClass.js"
 import { Browser, Page } from "puppeteer"
 import * as cheerio from "cheerio"
 import { parse as parseDate } from "date-fns"
+import { logger } from "./logging.js"
 
 export class iKitesurfProcessor extends SiteProcessor {
     urlRegex: RegExp = new RegExp(
@@ -76,11 +77,11 @@ export class iKitesurfProcessor extends SiteProcessor {
         for (let i = 0; i < 2; i++) {
             await this._loginiWindsurf(page)
             if (await this._isLoggediniWindsurf(page)) {
-                console.log("Login succeeded.")
+                logger.info("Login succeeded.")
                 return true
             }
         }
-        console.error("Login FAILED")
+        logger.error("Login FAILED")
         return false
     }
 }

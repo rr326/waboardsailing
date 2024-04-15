@@ -2,6 +2,7 @@ import { Browser, Page } from "puppeteer"
 import * as cheerio from "cheerio"
 import { LocalStorage } from "node-localstorage"
 import { SiteProcessor } from "./SiteProcessorClass.js"
+import { logger } from "./logging.js"
 
 const localStorage = new LocalStorage("./tmp")
 

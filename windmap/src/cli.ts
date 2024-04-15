@@ -16,7 +16,7 @@ export function cli(): CliArgs {
             debug: {
                 type: "boolean",
                 description: "Enable debug mode",
-                default: false,
+                default: true,
             },
         })
         .options({
@@ -27,6 +27,6 @@ export function cli(): CliArgs {
             },
         })
         .showHelpOnFail(true)
-        .parseSync() // Use parseSync() for better error handling within a script
+        .parseSync()
     return argv
 }

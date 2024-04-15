@@ -2,6 +2,7 @@ import puppeteer, { Browser, Page } from "puppeteer"
 import { LocalStorage } from "node-localstorage"
 import * as fs from "fs"
 import * as path from "path"
+import { logger } from "./logging.js"
 
 const localStorage = new LocalStorage("./tmp")
 
@@ -44,13 +45,13 @@ export class SiteProcessor {
      */
 
     async fetchPage(url: string): Promise<string> {
-        console.debug("Fetching page: ", url)
+        logger.debug("Fetching page: ", url)
         return await this._getPage(url)
     }
 
     handleUrl(url: string): boolean {
-        console.debug(
-            `${this.constructor.name}.handleUrl(): (${url}) => (${this.urlRegex.test(url)}`,
+        logger.debug(
+            `${this.constructor.name}.handleUrl(): (${url}) => (${this.urlRegex.test(url)})`,
         )
         return this.urlRegex.test(url)
     }
@@ -58,18 +59,18 @@ export class SiteProcessor {
     async _fetchPageRaw(pageUrl: string): Promise<string | null> {
         let response = null,
             body = null
-        console.log("fetching", pageUrl)
+        logger.info(`fetching ${pageUrl}`)
         try {
             response = await fetch(pageUrl)
             if (response.ok) {
-                console.log("got page response", pageUrl)
+                logger.info(`got page response ${pageUrl}`)
                 body = await response.text()
-                console.log("got body", pageUrl)
+                logger.info(`got body ${pageUrl}`)
             } else {
                 throw new Error("Network response was not ok.")
             }
         } catch (error) {
-            console.error("Error fetching", error)
+            logger.error(`Error fetching ${error}`)
         } finally {
             return body
         }
@@ -86,16 +87,15 @@ export class SiteProcessor {
     }
 
     async _getPage(pageUrl: string) {
-        console.log("getpage", pageUrl)
+        logger.info(`getpage ${pageUrl}`)
         let page = localStorage.getItem(pageUrl)
         if (this.useCache && page) {
-            console.log("got page from local storage", pageUrl)
+            logger.info(`got page from local storage ${pageUrl}`)
         } else {
             page = await this._fetchPageJS(pageUrl)
             localStorage.setItem(pageUrl, page)
-            console.log(
-                "got page from fetch and saved to local storage",
-                pageUrl,
+            logger.info(
+                `got page from fetch and saved to local storage: ${pageUrl}`,
             )
         }
         return page
@@ -120,12 +120,12 @@ export class SiteProcessor {
     async processPage(url: string): Promise<WeatherData | null> {
         if (this.handleUrl(url)) {
             try {
-                console.debug("Processing page: ", url)
+                logger.debug("Processing page: ", url)
                 let html = await this.fetchPage(url)
                 let data = this.parseHtml(html)
                 return data
             } catch (e) {
-                console.error("Error processing page: ", url, e)
+                logger.error(`Error processing page: ${url} - ${e}`)
                 return null
             }
         } else {
@@ -142,7 +142,7 @@ export class SiteProcessor {
             const credentialsData = fs.readFileSync(credentialsPath, "utf-8")
             return JSON.parse(credentialsData)
         } catch (error) {
-            console.error("Error loading credentials file:", error)
+            logger.error(`Error loading credentials file: ${error}`)
             return null // Or handle the error differently
         }
     }
