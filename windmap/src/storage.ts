@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes, Model, Op } from "sequelize"
+import { Sequelize, DataTypes, Model, Op, literal } from "sequelize"
 import { logger } from "./logging.js"
 
 let sequelize: Sequelize // Store the connection instance
@@ -57,8 +57,8 @@ function initModels(sequelize: Sequelize) {
                     name: "location_data_timestamp_index",
                     unique: false,
                     fields: ["locationName", "dataTimestamp"],
-                }
-            ]
+                },
+            ],
         },
     )
 }
@@ -69,7 +69,7 @@ async function initDB(debugLogging: boolean) {
         dbLogger = (msg: string) => logger.debug(msg)
         //logger.debug.bind(logger), // Displays all messages
     } else {
-        dbLogger = (msg: string) => { }
+        dbLogger = (msg: string) => {}
     }
 
     if (!sequelize) {
@@ -115,7 +115,7 @@ export async function getWindData() {
         order: [
             ["locationName", "ASC"],
             ["dataTimestamp", "DESC"],
-            ["createdAt", "DESC"]
+            ["createdAt", "DESC"],
         ],
     })
     return data
@@ -125,21 +125,46 @@ export async function getLastestEachLocation(maxAge: number = 3600) {
     /**
      * Get the latest data for each location
      * @param maxAge - The maximum age of the data in seconds
-     * 
+     *
      * returns max 1 record per location
+     *
+     * Devnotes
+     * I could not get this to work easily or efficiently. After a
+     * ton of debugging, I got this two step process to work.
+     *
+     * My database is small and this is a testing corner case, so not important.
      */
+    let maxCreatedAt = await WindData.findAll({
+        attributes: [
+            "id",
+            "locationName",
+            "dataTimestamp",
+            [literal("MAX(createdAt)"), "maxCreatedAt"],
+        ],
+        group: ["locationName"],
+        where: {
+            // Make sure this is the same as below
+            dataTimestamp: {
+                [Op.gt]: new Date(Date.now() - maxAge * 1000),
+            },
+        },
+    })
+
     let data = await WindData.findAll({
         where: {
+            id: {
+                [Op.in]: maxCreatedAt.map((r) => r.getDataValue("id")),
+            },
             dataTimestamp: {
                 [Op.gt]: new Date(Date.now() - maxAge * 1000),
             },
         },
         order: [
-            // ["locationName", "ASC"],
+            ["locationName", "ASC"],
             ["dataTimestamp", "DESC"],
-            ["createdAt", "DESC"]
+            ["createdAt", "DESC"],
         ],
-        group: ['locationName'], 
     })
+
     return data
 }
