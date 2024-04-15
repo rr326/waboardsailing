@@ -7,6 +7,7 @@
 -   rename index.ts to main.ts
 -   extract WindSite to its own file
 -   headless
+-   better logging
 
 ## Typescript / VSCode debuging
 

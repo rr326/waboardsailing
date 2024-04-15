@@ -17,7 +17,7 @@
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceFolder}/windmap",
-            "program": "./src/index.ts",  
+            "program": "./src/main.ts",  
             "runtimeExecutable": "tsx",
             "skipFiles": ["<node_internals>/**", "node_modules/**"],     
             "stopOnEntry": false

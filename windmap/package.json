@@ -2,11 +2,11 @@
     "name": "windmap",
     "version": "1.0.0",
     "description": "",
-    "main": "dist/index.js",
+    "main": "dist/main.js",
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "main": "tsc ; node dist/index.js",
+        "main": "tsc ; node dist/main.js",
         "tsc": "tsc --watch",
         "clean": "npx prettier ./src --write"
     },
@@ -16,9 +16,11 @@
         "cheerio": "^1.0.0-rc.12",
         "date-fns": "^3.6.0",
         "node-localstorage": "^3.0.5",
-        "puppeteer": "^22.6.3"
+        "puppeteer": "^22.6.3",
+        "yargs": "^17.7.2"
     },
     "devDependencies": {
-        "@types/node-localstorage": "^1.3.3"
+        "@types/node-localstorage": "^1.3.3",
+        "@types/yargs": "^17.0.32"
     }
 }

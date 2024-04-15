@@ -1,5 +1,6 @@
 import { iKitesurfProcessor } from "./processiKitesurf.js"
 import { TempestwxProcessor } from "./processTempestwx.js"
+import yargs from "yargs/yargs"
 
 async function main(locations: WindSite[]) {
     let pageProcessors = [new iKitesurfProcessor(), new TempestwxProcessor()]
@@ -30,6 +31,23 @@ let locations: WindSite[] = [
 ]
 
 // main()
-console.log("windmap/index.js running!")
-await main(locations)
-console.log("windmap/index.js done!")
+console.log("windmap/main.js running!")
+
+yargs(process.argv.slice(2))
+    .scriptName("pirate-parser")
+    .usage('$0 <cmd> [args]')
+    .command('hello [name]', 'welcome ter yargs!', (yargs) => {
+    yargs.positional('name', {
+        type: 'string',
+        default: 'Cambi',
+        describe: 'the name to say hello to'
+    })
+    }, function (argv) {
+    console.log('hello', argv.name, 'welcome to yargs!')
+    })
+    .help()
+    .argv
+
+
+// await main(locations)
+console.log("windmap/main.js done!")
