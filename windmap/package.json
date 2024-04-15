@@ -17,6 +17,8 @@
         "date-fns": "^3.6.0",
         "node-localstorage": "^3.0.5",
         "puppeteer": "^22.6.3",
+        "sequelize": "^6.37.3",
+        "sqlite3": "^5.1.7",
         "winston": "^3.13.0",
         "yaml": "^2.4.1",
         "yargs": "^17.7.2"

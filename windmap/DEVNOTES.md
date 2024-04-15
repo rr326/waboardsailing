@@ -2,6 +2,7 @@
 
 ## TODO
 
+-   storage: sqlite
 -   logging - to file
 
 ## Typescript / VSCode debuging

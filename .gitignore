@@ -6,3 +6,4 @@ dist/
 content/pages/sites/test.md
 **/node_modules/*
 **/.credentials.json
+db.sqlite3

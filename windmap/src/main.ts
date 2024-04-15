@@ -3,6 +3,7 @@ import { TempestwxProcessor } from "./processTempestwx.js"
 import { cli } from "./cli.js"
 import { setLoglevel, logger } from "./logging.js"
 import { getConfig } from "./config.js"
+import {getDB} from "./storage.js"
 
 async function main(locations: WindSite[], debug: boolean, cache: boolean) {
     let pageProcessors = [
@@ -36,6 +37,7 @@ logger.debug("config: %O", config)
 
 setLoglevel(argv.debug ? "debug" : "info")
 logger.debug("Command line arguments: %O", argv)
+let db = getDB()
 
-await main(locations, argv.debug, argv.cache)
+//await main(locations, argv.debug, argv.cache)
 logger.info("windmap complete")
