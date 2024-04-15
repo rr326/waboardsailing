@@ -168,3 +168,13 @@ export async function getLastestEachLocation(maxAge: number = 3600) {
 
     return data
 }
+
+export async function debugQueries() {
+    let allRecords = await getWindData()
+    logger.debug(
+        "\ngetWindData[0,20]\n" +
+            JSON.stringify(allRecords.slice(0, 20), null, 4),
+    )
+    let latest = await getLastestEachLocation(100000000)
+    logger.debug("\ngetLastestEachLocation\n" + JSON.stringify(latest, null, 4))
+}
