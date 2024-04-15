@@ -1,5 +1,5 @@
 import winston from "winston"
-import {format} from "date-fns"
+import { format } from "date-fns"
 
 // Initialize
 export const logger = winston.createLogger({

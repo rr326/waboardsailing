@@ -1,10 +1,6 @@
 import { Browser, Page } from "puppeteer"
 import * as cheerio from "cheerio"
-import { LocalStorage } from "node-localstorage"
 import { SiteProcessor } from "./SiteProcessorClass.js"
-import { logger } from "./logging.js"
-
-const localStorage = new LocalStorage("./tmp")
 
 export class TempestwxProcessor extends SiteProcessor {
     urlRegex: RegExp = new RegExp("^https://tempestwx.com")
@@ -30,11 +26,9 @@ export class TempestwxProcessor extends SiteProcessor {
             .find(".wind-direction-icon")
             .attr("data-wind-direction")
         let windAvg = ccWind.find("span[data-param=wind_avg]").text()
-        let dataTimestamp = $("#list-summary-view")
-            .find("span[data-param=timestamp]")
-            .text()
         let rapidWindTimestamp = ccWind.attr("data-rapid_wind_timestamp")
         return {
+            location: "Tempestwx",
             windDirection: windDirection && parseInt(windDirection),
             windAvg: parseInt(windAvg),
             windSpeedText: windAvg,

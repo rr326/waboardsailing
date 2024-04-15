@@ -2,6 +2,7 @@ import { iKitesurfProcessor } from "./processiKitesurf.js"
 import { TempestwxProcessor } from "./processTempestwx.js"
 import { cli } from "./cli.js"
 import { setLoglevel, logger } from "./logging.js"
+import { getConfig } from "./config.js"
 
 async function main(locations: WindSite[], debug: boolean, cache: boolean) {
     let pageProcessors = [
@@ -14,27 +15,25 @@ async function main(locations: WindSite[], debug: boolean, cache: boolean) {
             if (processor.handleUrl(location.url)) {
                 let windData = await processor.processPage(location.url)
                 logger.info(
-                    `Processed: ${processor.constructor.name}\nLocation: ${location.name}\n%O`, windData,
+                    `Processed: ${processor.constructor.name}\nLocation: ${location.name}\n%O`,
+                    windData,
                 )
             }
         }
     }
 }
 
-let locations: WindSite[] = [
-    {
-        name: "Waverlyish",
-        url: "https://tempestwx.com/station/105376/",
-    },
-    {
-        name: "Golden Gardens Light 2",
-        url: "https://wx.ikitesurf.com/spot/93975",
-    },
-]
-
 // main()
 logger.info("windmap running")
 let argv = cli()
+const config = getConfig()
+if (!config || !config.WindSites) {
+    logger.error("No WindSites found in config. config: %O", config)
+    process.exit(1)
+}
+const locations = config.WindSites as WindSite[]
+logger.debug("config: %O", config)
+
 setLoglevel(argv.debug ? "debug" : "info")
 logger.debug("Command line arguments: %O", argv)
 

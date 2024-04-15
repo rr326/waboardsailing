@@ -1,0 +1,12 @@
+
+WindSites:
+  - name: Waverlyish
+    url: "https://tempestwx.com/station/105376/"
+    # lat/lon hidden on page. Seaerch for id="location-map"
+    lat: 47.68178
+    lon: -122.21552
+  - name: Golden Gardens Light 2
+    url: "https://wx.ikitesurf.com/spot/93975"
+    # lat/lon hidden on page. Search for "spotInfoLat"
+    lat: 47.68767
+    lon: -122.40492 

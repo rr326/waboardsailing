@@ -2,8 +2,6 @@
 
 ## TODO
 
--   switch from LocalStorage to somethign else
--   extract WindSite to its own file
 -   logging - to file
 
 ## Typescript / VSCode debuging
