@@ -3,6 +3,7 @@ import { Browser, Page } from "puppeteer"
 import * as cheerio from "cheerio"
 import { parse as parseDate } from "date-fns"
 import { logger } from "./logging.js"
+import { is } from "date-fns/locale"
 
 export class iKitesurfProcessor extends SiteProcessor {
     urlRegex: RegExp = new RegExp(
@@ -40,13 +41,16 @@ export class iKitesurfProcessor extends SiteProcessor {
         return this.loginiWindsurf(page)
     }
 
-    async _loginiWindsurf(page: Page) {
+    async _attemptToLogin(page: Page) {
         // This does one round of login
         const credentials = this.loadCredentials()
         await page.goto("https://secure.ikitesurf.com/?app=wx&rd=Search.aspx", {
             waitUntil: "networkidle0",
         })
-        let html = await page.content()
+        if (await this._isLoggediniWindsurf(page)) {
+            logger.debug("Already logged in")
+            return true
+        } // else, login
         await page.waitForSelector("#login-username")
         await page.type("#login-username", credentials.iwindsurf.username)
         await page.waitForSelector("#login-password")
@@ -74,13 +78,15 @@ export class iKitesurfProcessor extends SiteProcessor {
         // signin page: https://secure.ikitesurf.com/?app=wx&rd=Search.aspx
         // post-signin page: https://wx.ikitesurf.com/Search.aspx
 
-        for (let i = 0; i < 2; i++) {
-            await this._loginiWindsurf(page)
+        for (let i = 0; i < 3; i++) {
+            await this._attemptToLogin(page)
             if (await this._isLoggediniWindsurf(page)) {
-                logger.info("iWindsurf: Login succeeded.")
+                // do this first. If saved context, might already be logged in.
+                logger.debug("iWindsurf: Login succeeded.")
                 return true
             }
         }
+
         logger.error("Login FAILED")
         return false
     }

@@ -2,8 +2,9 @@
 
 ## TODO
 
--   storage: sqlite
--   logging - to file
+-   Promise.all([processSite(site) for site in WindSite[]])
+    -   fix logging so everything is preceeded by site name
+    -   would be faster. Could it add complications?
 
 ## Typescript / VSCode debuging
 

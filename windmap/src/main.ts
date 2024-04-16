@@ -5,6 +5,36 @@ import { setLoglevel, logger } from "./logging.js"
 import { getConfig } from "./config.js"
 import { getDB, storeWindData, debugQueries } from "./storage.js"
 import { Sequelize } from "sequelize"
+import { SiteProcessor } from "./SiteProcessorClass.js"
+
+async function processOne(location: WindSite, processor: SiteProcessor): Promise<void> {
+    if (processor.handleUrl(location.url)) {
+        let windData = await processor.processPage(location.url)
+        logger.info(
+            `Processed: ${processor.constructor.name}\nLocation: ${location.name}\n%O`,
+            windData,
+        )
+        if (windData) {
+            await storeWindData(location.name, windData)
+            logger.debug("Stored wind data in db")
+        }
+    }
+}
+
+async function mainParallel(locations: WindSite[], debug: boolean, cache: boolean) {
+    let pageProcessors = [
+        new iKitesurfProcessor(debug, cache),
+        new TempestwxProcessor(debug, cache),
+    ]
+
+    let promises = []
+    for (const location of locations) {
+        for (const processor of pageProcessors) {
+            promises.push(processOne(location, processor))
+        }
+    }
+    await Promise.all(promises)
+}
 
 async function main(locations: WindSite[], debug: boolean, cache: boolean) {
     let pageProcessors = [
@@ -44,9 +74,9 @@ setLoglevel(argv.debug ? "debug" : "info")
 logger.debug("Command line arguments: %O", argv)
 let db = await getDB(false)
 
-await main(locations, argv.debug, argv.cache)
+await mainParallel(locations, argv.debug, argv.cache)
 
-await debugQueries()
+// await debugQueries()
 
 await db.close()
 logger.debug("windmap complete")

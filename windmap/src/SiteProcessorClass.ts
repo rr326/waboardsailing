@@ -105,8 +105,11 @@ export class SiteProcessor {
     ): Promise<[Browser, Page]> {
         let browser = await puppeteer.launch({
             headless: headless || !this.debug,
+            userDataDir: "./tmp/puppeteer",
         })
         let page = await browser.newPage()
+        page.setDefaultTimeout(1) // for page.waitForSelector() - don't wait. Should already be there.
+        page.setDefaultNavigationTimeout(15 * 1000) // for page.goto()
 
         if (this.requiresLogin) {
             let loggedIn = await this.loginSite(url, browser, page)
