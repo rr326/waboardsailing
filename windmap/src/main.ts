@@ -21,20 +21,6 @@ async function processOne(location: WindSite, processor: SiteProcessor): Promise
     }
 }
 
-async function mainParallel(locations: WindSite[], debug: boolean, cache: boolean) {
-    let pageProcessors = [
-        new iKitesurfProcessor(debug, cache),
-        new TempestwxProcessor(debug, cache),
-    ]
-
-    let promises = []
-    for (const location of locations) {
-        for (const processor of pageProcessors) {
-            promises.push(processOne(location, processor))
-        }
-    }
-    await Promise.all(promises)
-}
 
 async function main(locations: WindSite[], debug: boolean, cache: boolean) {
     let pageProcessors = [
@@ -74,7 +60,7 @@ setLoglevel(argv.debug ? "debug" : "info")
 logger.debug("Command line arguments: %O", argv)
 let db = await getDB(false)
 
-await mainParallel(locations, argv.debug, argv.cache)
+await main(locations, argv.debug, argv.cache)
 
 // await debugQueries()
 
