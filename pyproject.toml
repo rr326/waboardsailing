@@ -1,21 +1,27 @@
-[tool.poetry]
+[project]
+authors = [
+    {name = "Ross Rosen", email = "rrosen326@gmail.com"},
+]
+
 name = "waboardsailing"
 version = "0.1.0"
 description = ""
-authors = ["Ross Rosen <rrosen326@gmail.com>"]
 readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
+[tool.uv]
+dev-dependencies = [
+    "markdown>=3.7",
+    "livereload>=2.7.0",
+    "pelican>=4.9.1",
+    "invoke>=2.2.0",
+    "pelican-cleanurl",
+    "ruff>=0.6.4",
+]
+[tool.uv.workspace]
+members = []
 
-
-[tool.poetry.group.dev.dependencies]
-markdown = "^3.6"
-livereload = "^2.6.3"
-pelican-cleanurl = {git = "https://github.com/rr326/pelican-cleanurl.git"}
-pelican = "^4.9.1"
-invoke = "^2.2.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv.sources]
+pelican-cleanurl = { git = "https://github.com/rr326/pelican-cleanurl.git" }

@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/waboardsailing/__init__.py
+src/waboardsailing.egg-info/PKG-INFO
+src/waboardsailing.egg-info/SOURCES.txt
+src/waboardsailing.egg-info/dependency_links.txt
+src/waboardsailing.egg-info/top_level.txt

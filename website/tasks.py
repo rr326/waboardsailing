@@ -6,9 +6,6 @@ import shutil
 import sys
 import datetime
 
-print(f"\n{'*'*80}\nThis invoke file has not been tested.\n{'*'*80}\n")
-sys.exit(1)
-
 from invoke import task
 from invoke.main import program
 from invoke.util import cd
