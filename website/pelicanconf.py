@@ -7,15 +7,15 @@ from custom_jinja_filters import split, el, shuffle, markdown
 JINJA_FILTERS = {"split": split, "el": el, "shuffle": shuffle, "markdown": markdown}
 
 
-AUTHOR = ""
+AUTHOR = "Ross Rosen"
 SITENAME = "WA Boardsailing"
-SITEURL = ""
-
+SITEURL = "waboardsailing.org"
+OUTPUT_PATH = "dist"
 PATH = "content"
-
 TIMEZONE = "America/Los_Angeles"
-
 DEFAULT_LANG = "en"
+CLOUDFRONT_DISTRIBUTION_ID = "E10UTPV32WD7RO"
+S3_BUCKET =  "s3://www.waboardsailing.org"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -25,18 +25,10 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
-)
+LINKS = ()
 
 # Social widget
-SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
-)
+SOCIAL = ()
 
 DEFAULT_PAGINATION = False
 

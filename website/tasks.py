@@ -25,6 +25,8 @@ CONFIG = {
     "deploy_path": SETTINGS["OUTPUT_PATH"],
     "host": "localhost",
     "port": 8000,
+    "s3bucket": SETTINGS["S3_BUCKET"],
+    "cloudfront_distribution_id": SETTINGS["CLOUDFRONT_DISTRIBUTION_ID"],
 }
 
 
@@ -124,9 +126,9 @@ def pelican_run(cmd):
 @task
 def upload(c):
     build(c)
-    c.run("aws s3 sync 'dist'/ s3://www.waboardsailing.org  --delete")
+    c.run(f"aws s3 sync {CONFIG['deploy_path']}/ {CONFIG['s3bucket']}  --delete")
     c.run(
-        "aws cloudfront create-invalidation --distribution-id E10UTPV32WD7RO --paths '/*'"
+        f"aws cloudfront create-invalidation --distribution-id {CONFIG['cloudfront_distribution_id']} --paths '/*'"
     )
 
 
