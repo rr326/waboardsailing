@@ -22,7 +22,7 @@ def split(value, sep, maxsplit=-1, strip=False) -> List | None:
     return [el.strip() if isinstance(el, str) and strip else el for el in parts]
 
 
-def el(value: T, idx: int) -> T: # pylint: disable=invalid-name
+def el(value: T, idx: int) -> T:  # pylint: disable=invalid-name
     """
     If T = List, returns value[idx]
     else: None
@@ -54,7 +54,7 @@ def markdown(value: str, skip_nomarkdown=True) -> str:
     try:
         html = markdown_library.markdown(value)
         if skip_nomarkdown:
-            if html == "<p>"+value+"</p>":
+            if html == "<p>" + value + "</p>":
                 html = value
     except Exception as err:
         return f"Markdown Error ({err}) on {value}"

@@ -3,15 +3,16 @@
 
 import os
 import sys
+
 sys.path.append(os.curdir)
 from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = ''
+SITEURL = ""
 RELATIVE_URLS = False
 LIVERELOAD = False
 USE_GOOGLE_ANALYTICS = True
 
 DELETE_OUTPUT_DIRECTORY = True
 
-#GOOGLE_ANALYTICS = ""
+# GOOGLE_ANALYTICS = ""
