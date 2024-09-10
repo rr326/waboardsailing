@@ -8,3 +8,6 @@ content/pages/sites/test.md
 **/.credentials.json
 db.sqlite3
 **/*.log
+**/__pycache__/
+**/.ipynb_checkpoints/
+**/.DS_Store
