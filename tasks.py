@@ -4,7 +4,7 @@ import os
 import shlex
 import shutil
 
-from invoke import task
+from invoke.tasks import task
 from pathlib import Path
 from PIL import Image
 from invoke.main import program
