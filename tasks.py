@@ -6,6 +6,8 @@ import shutil
 import sys
 
 from invoke import task
+from pathlib import Path
+from PIL import Image
 from invoke.main import program
 from invoke.util import cd
 from pelican import main as pelican_main
@@ -106,3 +108,29 @@ def upload(c):
 @task
 def format(c):
     c.run("ruff format .")
+
+@task
+def scale_images(c):
+    """
+    For every image file in content/images_raw:
+    - Scale image to 1920px width, max
+    - Save to content/images
+    - Using pathlib
+    """
+    print("\n\nCreating scaled images")
+    source_dir = Path('content/images_raw')
+    destination_dir = Path('content/images')
+    destination_dir.mkdir(parents=True, exist_ok=True)
+    extensions = ['.jpeg', '.jpg', '.png', '.ico', '.heic']
+
+    for image_path in source_dir.rglob('*'):
+        if image_path.suffix.lower() in extensions:
+            with Image.open(image_path) as img:
+                if img.width > 1920:
+                    print(f"\033[1m\033[97mScaling {image_path.name}\033[0m")
+                    new_height = int((1920 / img.width) * img.height)
+                    img = img.resize((1920, new_height), Image.Resampling.LANCZOS)
+                else:
+                    print(f"\033[90mCopying {image_path.name}\033[0m")
+                img.save(destination_dir / image_path.name)
+    print()

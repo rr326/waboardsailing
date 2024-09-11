@@ -4,3 +4,4 @@ Version: 0.1.0
 Author-email: Ross Rosen <rrosen326@gmail.com>
 Requires-Python: >=3.12
 Description-Content-Type: text/markdown
+Requires-Dist: pillow>=10.4.0
