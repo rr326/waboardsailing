@@ -132,5 +132,7 @@ def scale_images(c):
                     img = img.resize((1920, new_height), Image.Resampling.LANCZOS)
                 else:
                     print(f"\033[90mCopying {image_path.name}\033[0m")
-                img.save(destination_dir / image_path.name)
+                dest_file = destination_dir / image_path.relative_to(source_dir)
+                dest_file.parent.mkdir(parents=True, exist_ok=True)
+                img.save(dest_file)
     print()
