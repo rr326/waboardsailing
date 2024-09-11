@@ -53,10 +53,23 @@ When the river runs low, then a rock bar emerges, so finners and especially foil
 
 ![Low Water](/images/vantage/low1.jpg)
 
-### Water Level
+### Water Level Information
 
 Grant PUD River Conditions Website: [Grant PUD](https://www.grantpud.org/river)
 
 ![Current Vantage Water Level](https://www.grantpud.org/data/boatlaunch/Vantage_Boat_Launch.png)
 
 ![Vantage](/images/vantage.png)
+
+### Gallery
+
+![calm](/images/vantage/calm.jpg)
+![calm2](/images/vantage/calm2.jpg)
+![high1](/images/vantage/high1.jpg)
+![high2](/images/vantage/high2.jpg)
+![low1](/images/vantage/low1.jpg)
+![low_water_board](/images/vantage/low_water_board.jpg)
+![people](/images/vantage/people.jpg)
+![picnic_table](/images/vantage/picnic_table.jpg)
+![upriver](/images/vantage/upriver.jpg)
+![windy](/images/vantage/windy.jpg)
