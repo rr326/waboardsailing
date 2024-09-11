@@ -3,7 +3,6 @@
 import os
 import shlex
 import shutil
-import sys
 
 from invoke import task
 from pathlib import Path
@@ -11,8 +10,10 @@ from PIL import Image
 from invoke.main import program
 from invoke.util import cd
 from pelican import main as pelican_main
-from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
+
+os.chdir(Path(__file__).resolve().parent)
+
 
 OPEN_BROWSER_ON_SERVE = True
 SETTINGS_FILE_BASE = "pelicanconf.py"
@@ -109,6 +110,7 @@ def upload(c):
 def format(c):
     c.run("ruff format .")
 
+
 @task
 def scale_images(c):
     """
@@ -118,12 +120,12 @@ def scale_images(c):
     - Using pathlib
     """
     print("\n\nCreating scaled images")
-    source_dir = Path('content/images_raw')
-    destination_dir = Path('content/images')
+    source_dir = Path("content/images_raw")
+    destination_dir = Path("content/images")
     destination_dir.mkdir(parents=True, exist_ok=True)
-    extensions = ['.jpeg', '.jpg', '.png', '.ico', '.heic']
+    extensions = [".jpeg", ".jpg", ".png", ".ico", ".heic"]
 
-    for image_path in source_dir.rglob('*'):
+    for image_path in source_dir.rglob("*"):
         if image_path.suffix.lower() in extensions:
             with Image.open(image_path) as img:
                 if img.width > 1920:

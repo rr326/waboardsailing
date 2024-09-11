@@ -15,7 +15,7 @@ PATH = "content"
 TIMEZONE = "America/Los_Angeles"
 DEFAULT_LANG = "en"
 CLOUDFRONT_DISTRIBUTION_ID = "E10UTPV32WD7RO"
-S3_BUCKET =  "s3://www.waboardsailing.org"
+S3_BUCKET = "s3://www.waboardsailing.org"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
