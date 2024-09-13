@@ -67,10 +67,10 @@ restaurants, breweries, hotels, etc. It is also home to some of the best beginne
 
 ## Novice Launches
 
-- **The Hook** - The Hook is
+-   **The Hook** - The Hook is
   totally protected and sheltered from the strongest winds. There are also
   boards and instructors right there.
-- **The Event Site** - The Event Site
+-   **The Event Site** - The Event Site
   has an area that is also quite protected and suitable for begginners and has
   instructors and rental gear.
 
@@ -78,34 +78,22 @@ restaurants, breweries, hotels, etc. It is also home to some of the best beginne
 
 It's probably best to learn from dedicated Gorge sites but here are two places to start you off.
 
-- **Waterfront Park** - This is just a little west of the Event Site and is very forgiving in a westerly.
+-   **Waterfront Park** - This is just a little west of the Event Site and is very forgiving in a westerly.
   The wind is a bit sheltered closer to shore and if things go awry and the wind pushes you
   downwind towards the east, you can climb out at many points, all the way to the Event Site. On an
   easteryly, you'd float to the hook. Just stay close to the south shore.
-- **The Event Site** - A really nice launch with lots of good sailors to watch. Stay close to the south shore and you have
+-   **The Event Site** - A really nice launch with lots of good sailors to watch. Stay close to the south shore and you have
   plenty of room to drift east or west without risk.
 
 ## Resources
 
-TBD - Links to sites
-
-- [The CGWA Guide](https://cgw2.org/local*info/)
-- [Tourist Guide](https://columbiagorgetomthood.com/windsurfing/)
+-   [The CGWA Guide](https://cgw2.org/local*info/)
+-   [Tourist Guide](https://columbiagorgetomthood.com/windsurfing/)
 
 ## Gear Shops
 
 There are many and I haven't met anyone who wasn't helpful. That said, here are my pointers
 to get you started.
 
-- [Big Winds](http://www.bigwinds.com/) - They have always been incredibly helpful and knowledgeable. They are my goto spot.
-- [Winddance](http://www.windance.com/) - They have a big selection of used gear.
-
-## Where To Stay
-
-### Hotels
-
-TBD
-
-### Camping
-
-TBD
+-   [Big Winds](http://www.bigwinds.com/) - They have always been incredibly helpful and knowledgeable. They are my goto spot.
+-   [Winddance](http://www.windance.com/) - They have a big selection of used gear.

@@ -3,12 +3,14 @@ Title: Desert Aire
 lat_lon: 46.684, -119.93
 region: Columbia Plateau
 best_wind: Sideshore W-by-NW
-level: Beginner to expert
+level: beginner
 fee: Free for [Priest Rapids Recreation Area](https://maps.google.com/?cid=16562151886467720909&entry=gps&g_st=ac)
 author: Guislain
 author_email: <gb2clagron@gmail.com>
 
 # Desert Aire
+
+![Desert Aire 3](/images/desertaire/PXL_20240701_013950535.jpg)
 
 ## PROs
 
@@ -51,7 +53,7 @@ Foilers should steer clear of the boat launch area which has milfoil
 
 ![Desert Aire 1](/images/desertaire/PXL_20240701_000517172.jpg)
 ![Desert Aire 2](/images/desertaire/PXL_20240701_013805734.jpg)
-![Desert Aire 3](/images/desertaire/PXL_20240701_013950535.jpg)
+
 ![Desert Aire 4](/images/desertaire/PXL_20240701_014104714.jpg)
 ![Desert Aire 5](/images/desertaire/PXL_20240702_000348102.jpg)
 ![Desert Aire 6](/images/desertaire/PXL_20240702_000802035.jpg)

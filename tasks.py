@@ -44,6 +44,7 @@ def clean(c):
 @task
 def build(c):
     """Build local version of site"""
+    clean(c)
     pelican_run("-d -s {settings_base}".format(**CONFIG))
 
 
@@ -57,6 +58,8 @@ def regenerate(c):
 def serve(c):
     """Serve a development version of the site"""
     from livereload import Server
+
+    clean(c)
 
     def cached_build():
         cmd = "-s {settings_base} -e CACHE_CONTENT=true LOAD_CONTENT_CACHE=true"

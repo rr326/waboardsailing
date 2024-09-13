@@ -1,5 +1,5 @@
 template: site
-Title: Mags
+Title: Magnuson Park
 lat_lon: 47.675585, -122.251607
 region: Lake Washington
 best_wind: SE, S, SW (side offshore)
@@ -29,7 +29,7 @@ of the park obstructs the wind and you have to slog or swim out your board
 to get to the better wind. Worse, if something goes wrong, the wind is pushing
 you away from shore.
 
-That said, Mags is moderately foregiving because unless the wind is very westerly,
+That said, Mags is moderately forgiving because unless the wind is very westerly,
 there is plenty of land mass for your to slog/swim back to. On the picture below,
 the distance between the launch and the boat launch downwind (N) is about 200 yards,
 and there's plenty of land mass north of that.
@@ -43,11 +43,3 @@ Use the HRRR model for southerlies, which is when mags is on. (WRF for notherlie
 There is no perfect sensor for Mags.
 
 [Golden Gardens](https://wx.iwindsurf.com/spot/93975) has a good sensor, but tends to be windier.
-
-## Advanced Topics
-
-TBD
-
-## NW-Windtalk Threads
-
-TBD

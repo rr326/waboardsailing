@@ -23,19 +23,7 @@ Note: No bathroom - only honey buckets. It gets seaweedy in late summer. See the
 
 ### Key points
 
-* Weeds: beware the weeds / shallows in summer
-* Beginners: The shallow area is quite big (100 yards x 75 yards) and, especially in August when the lake level drops, it is easy to stand in and teach.
+*   Weeds: beware the weeds / shallows in summer
+*   Beginners: The shallow area is quite big (100 yards x 75 yards) and, especially in August when the lake level drops, it is easy to stand in and teach.
 
 ![Adams Street Boat Ramp Launch](/images/adams_street_beginner.jpeg)
-
-## Forecasting
-
-TBD
-
-## Advanced Topics
-
-TBD
-
-## NW-Windtalk Threads
-
-TBD
