@@ -46,3 +46,15 @@ As the mostly sea-level cool air on the west side of the Cascades rises towards 
 *   Low water level - Unlike at Vantage, I am not aware of any underwater hazards, so finners and especially foilers should be fine, but always be on the lookout for strange water patterns.
 Foilers should steer clear of the boat launch area which has milfoil
 *   Grant PUD River Conditions Website: [Grant PUD](https://www.grantpud.org/river)
+
+## Gallery
+
+![Desert Aire 1](/images/desertaire/PXL_20240701_000517172.jpg)
+![Desert Aire 2](/images/desertaire/PXL_20240701_013805734.jpg)
+![Desert Aire 3](/images/desertaire/PXL_20240701_013950535.jpg)
+![Desert Aire 4](/images/desertaire/PXL_20240701_014104714.jpg)
+![Desert Aire 5](/images/desertaire/PXL_20240702_000348102.jpg)
+![Desert Aire 6](/images/desertaire/PXL_20240702_000802035.jpg)
+![Desert Aire 7](/images/desertaire/PXL_20240827_201106218.jpg)
+![Desert Aire 8](/images/desertaire/PXL_20240827_203506721.jpg)
+![Desert Aire 9](/images/desertaire/PXL_20240827_232723376.jpg)
