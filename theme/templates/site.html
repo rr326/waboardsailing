@@ -1,4 +1,20 @@
-{% extends "page.html" %} {% block content %}
+{% extends "page.html" %} 
+{% block head %}
+
+<style> 
+  .summary-table {
+    background-color: rgb(244, 240, 229);
+    border-color: rgb(205,208,204) !important;
+  }
+
+
+</style>
+
+{% endblock %}
+
+
+
+{% block content %}
 
 <section id="content">
   {% if page.lat_lon %} {% set lat = page.lat_lon|split(',', strip=True)|el(0)%}
@@ -6,8 +22,8 @@
 
   <div class="container-sm"> <!-- Top section - table and map -->
     <div class="row">
-      <div class="col-lg-6 border border-4 border-dark mb-3"> <!-- Table -->
-        <table class="table table-sm site-table">
+      <div class="col-lg-6 mb-3"> <!-- Table -->
+        <table class="table table-sm site-table summary-table">
           <tbody>
             <tr>
               <th>Location</th>
