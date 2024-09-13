@@ -14,7 +14,7 @@ author_email: <cab_mall0n@icloud.com>
 
 ## Overview
 
-Can’t say enough about this launch for northerlies. The place is usually half full and you can back up you rig 30 feet from the shoreline with all grass rigging! (Matt Krus)
+Can't say enough about this launch for northerlies. The place is usually half full and you can back up you rig 30 feet from the shoreline with all grass rigging! (Matt Krus)
 
 Note: No bathroom - only honey buckets. It gets seaweedy in late summer. See the bottom map for areas to avoid.
 

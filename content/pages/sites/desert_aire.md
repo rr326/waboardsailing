@@ -14,11 +14,11 @@ author_email: <gb2clagron@gmail.com>
 
 ## PROs
 
-*"Desert Aire is Vantage’s little brother, albeit more civilized."*
+*"Desert Aire is Vantage's little brother, albeit more civilized."*
 
 *   Desert Aire is a bit tamer than Vantage, but with lots of amenities which Sand Hollow does not have.
 *   When ON, the dominant W-by-NW thermals are very predictable, starting from ~1p and steadily increasing until 5p when they can be quite strong, before they start to drop before sunset.
-*   Unlike Vantage with its mostly onshore/sideshore winds, Desert Aire’s sideshore winds makes for flatter water longer, until long swells develop.
+*   Unlike Vantage with its mostly onshore/sideshore winds, Desert Aire's sideshore winds makes for flatter water longer, until long swells develop.
 *   Like at Vantage, you get an encore with katabatic winds at sunset.
 
 ### Why are Desert Aire winds so predictable?
@@ -39,7 +39,7 @@ As the mostly sea-level cool air on the west side of the Cascades rises towards 
 *"Windsurfing can be an extreme sport, and Desert Aire can be such a spot."*
 
 *   Unlike Vantage, there is only one launch site.
-*   Being Vantage’s “little brother”, the wind at Desert Aire just isn’t as strong.
+*   Being Vantage's “little brother”, the wind at Desert Aire just isn't as strong.
 *   Warning - At Desert Aire, like Vantage, the dominant N-by-NW winds can turn ON on a dime (within 15min), so always be prepared for an early exit should you find yourself on the water with the wrong gear…
 
 ## Water Level
