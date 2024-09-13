@@ -27,7 +27,7 @@ CONFIG = {
     "settings_publish": "publishconf.py",
     "deploy_path": SETTINGS["OUTPUT_PATH"],
     "host": "localhost",
-    "port": 8000,
+    "port": 15932,
     "s3bucket": SETTINGS["S3_BUCKET"],
     "cloudfront_distribution_id": SETTINGS["CLOUDFRONT_DISTRIBUTION_ID"],
 }

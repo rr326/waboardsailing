@@ -4,121 +4,104 @@
   {% if page.lat_lon %} {% set lat = page.lat_lon|split(',', strip=True)|el(0)%}
   {% set lon = page.lat_lon|split(',')|el(1)%} {% endif %}
 
-  <div class="border border-4 border-dark mb-3">
-    <table class="table table-sm site-table">
-      <tbody>
-        <tr>
-          <th>Location</th>
-          <td>
-            {{lat| float |round(3)}}, {{lon| float |round(3)}} &nbsp;
-            <a
-              href="https://www.google.com/maps/place/{{page.lat_lon}}/@{{page.lat_lon}}"
-              target="_blank"
-              >Google Map</a
-            >
-          </td>
-        </tr>
-        {% if page.region | string | length > 0 %}
-        <tr>
-          <th>Region</th>
-          <td>{{page.region | markdown }}</td>
-        </tr>
-        {% endif %}
-        {% if page.level | string | length > 0 %}
-          <tr>
-            <th>Easiest Level</th>
-            <td>{{page.level | markdown }}</td>
-          </tr>
-        {% endif %}
-        {% if page.best_wind | string | length > 0 %}
-          <tr>
-            <th>Best Wind</th>
-            <td>{{page.best_wind | markdown }}</td>
-          </tr>
-        {% endif %}
-        {% if page.foiling | string | length > 0 %}
-          <tr>
-            <th>Foiling Info</th>
-            <td>{{page.foiling | markdown}}</td>
-          </tr>
-        {% endif %}
-        {% if page.fee | string | length > 0 %}
-          <tr>
-            <th>Fee</th>
-            <td>{{page.fee | markdown}}</td>
-          </tr>
-        {% endif %}
-        {% if page.parking | string | length > 0 %}
-          <tr>
-            <th>Parking</th>
-            <td>{{page.parking | markdown}}</td>
-          </tr>
-        {% endif %}
-        {% if page.forecast | string | length > 0 %}
-          <tr>
-            <th>Forecast</th>
-            <td>{{page.forecast | markdown}}</td>
-          </tr>
-        {% endif %}
-        {% if page.webcam | string | length > 0 %}
-          <tr>
-            <th>Webcam</th>
-            <td>{{page.webcam | markdown}}</td>
-          </tr>
-        {% endif %}
-        {% if page.author | string | length > 0 %}
-          <tr>
-            <th>Author</th>
-            <td><a href="mailto:{{page.author_email}}">{{page.author}}</a></td>
-          </tr>
-        {% endif %}
-      </tbody>
-    </table>
-  </div>
+  <div class="container-sm"> <!-- Top section - table and map -->
+    <div class="row">
+      <div class="col-lg-6 border border-4 border-dark mb-3"> <!-- Table -->
+        <table class="table table-sm site-table">
+          <tbody>
+            <tr>
+              <th>Location</th>
+              <td>
+                {{lat| float |round(3)}}, {{lon| float |round(3)}} &nbsp;
+                <a href="https://www.google.com/maps/place/{{page.lat_lon}}/@{{page.lat_lon}}" target="_blank">Google
+                  Map</a>
+              </td>
+            </tr>
+            {% if page.region | string | length > 0 %}
+            <tr>
+              <th>Region</th>
+              <td>{{page.region | markdown }}</td>
+            </tr>
+            {% endif %}
+            {% if page.level | string | length > 0 %}
+            <tr>
+              <th>Easiest Level</th>
+              <td>{{page.level | markdown }}</td>
+            </tr>
+            {% endif %}
+            {% if page.best_wind | string | length > 0 %}
+            <tr>
+              <th>Best Wind</th>
+              <td>{{page.best_wind | markdown }}</td>
+            </tr>
+            {% endif %}
+            {% if page.foiling | string | length > 0 %}
+            <tr>
+              <th>Foiling Info</th>
+              <td>{{page.foiling | markdown}}</td>
+            </tr>
+            {% endif %}
+            {% if page.fee | string | length > 0 %}
+            <tr>
+              <th>Fee</th>
+              <td>{{page.fee | markdown}}</td>
+            </tr>
+            {% endif %}
+            {% if page.parking | string | length > 0 %}
+            <tr>
+              <th>Parking</th>
+              <td>{{page.parking | markdown}}</td>
+            </tr>
+            {% endif %}
+            {% if page.forecast | string | length > 0 %}
+            <tr>
+              <th>Forecast</th>
+              <td>{{page.forecast | markdown}}</td>
+            </tr>
+            {% endif %}
+            {% if page.webcam | string | length > 0 %}
+            <tr>
+              <th>Webcam</th>
+              <td>{{page.webcam | markdown}}</td>
+            </tr>
+            {% endif %}
+            {% if page.author | string | length > 0 %}
+            <tr>
+              <th>Author</th>
+              <td><a href="mailto:{{page.author_email}}">{{page.author}}</a></td>
+            </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div> <!-- End of col - 1 -->
+      <div class="col-lg-6">
+        <iframe width="600" height="450" frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAONcHiiTi7b8HhKomYon0F-aaJd4WAlYI&q={{lat}},{{lon}}&zoom=6&center=47.7511,-120.7401" allowfullscreen>
+        </iframe>
+      </div> <!-- End of col - 2 -->
+    </div> <!-- End of row -->
+  </div> <!-- End of container -->
+
   {{ page.content }} {% if page.lat_lon %}
   <h3>Windy</h3>
-  <iframe
-    width="900"
-    height="650"
+  <iframe width="900" height="650"
     src="https://embed.windy.com/embed2.html?lat={{lat}}&lon={{lon}}&detailLat={{lat}}&detailLon={{lon}}&width=650&height=650&zoom=10&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=default&metricTemp=default&radarRange=-1"
-    frameborder="0"
-  ></iframe>
+    frameborder="0"></iframe>
   {% endif %} {% if page.iwindsurf_spot %}
   <h3>iWindsurf Current Conditions</h3>
-  <iframe
-    align="top"
+  <iframe align="top"
     src="https://widgets.iwindsurf.com/widgets/web/currentConditions?spot_id={{page.iwindsurf_spot}}&amp;units_wind=mph&amp;units_temp=F&amp;width=900&amp;height=400&amp;include_fx=false&amp;color=163770&amp;t&amp;activity=Windsurf&amp;app=iwindsurf"
-    width="900"
-    height="400"
-    frameborder="0"
-    scrolling="no"
-    allowtransparency="no"
-    class="mb-3"
-  ></iframe>
+    width="900" height="400" frameborder="0" scrolling="no" allowtransparency="no" class="mb-3"></iframe>
 
   <h3>iWindsurf Forecast (free)</h3>
-  <iframe
-    align="top"
+  <iframe align="top"
     src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id={{page.iwindsurf_spot}}&amp;units_wind=mph&amp;units_temp=F&amp;type=daily&amp;width=900&amp;height=420&amp;color=163770&amp;activity=Windsurf&amp;app=iwindsurf"
-    width="900"
-    height="420"
-    frameborder="0"
-    scrolling="no"
-    allowtransparency="no"
-    class="mb-3"
-  ></iframe>
+    width="900" height="420" frameborder="0" scrolling="no" allowtransparency="no" class="mb-3"></iframe>
 
   <h3>Historical Wind</h3>
-  <iframe
-    align="top"
+  <iframe align="top"
     src="https://widgets.iwindsurf.com/widgets/web/windStats?spot_id={{page.iwindsurf_spot}}&amp;units_wind=mph&amp;color=163770&amp;activity=Windsurf&amp;app=iwindsurf&amp;width=900"
-    width="900"
-    height="400"
-    frameborder="0"
-    scrolling="no"
-    allowtransparency="no"
-    class="mb-3"
-  ></iframe>
+    width="900" height="400" frameborder="0" scrolling="no" allowtransparency="no" class="mb-3"></iframe>
   {% endif %}
 </section>
 {% endblock %}
