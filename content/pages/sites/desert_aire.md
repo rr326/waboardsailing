@@ -27,6 +27,7 @@ As the mostly sea-level cool air on the west side of the Cascades rises towards 
 
 ### Tips
 
+*   Check the [Grant County PUD website](https://www.grantpud.org/river) for conditions.
 *   If the temperature in Ellensburg is 15°F more than Seattle/Kirkland (i.e. around Lake WA), which is pretty common 3 seasons out of the year, then you can be pretty sure that the Kittitas thermals will be ON.
 *   The entrance of the Priest Rapids Recreation Area is through the Desert Aire neighborhood next to the boat launch, with its 3 grassy & shady picnic shelters which is the best place to rig your gear.
 *   Wearing booties for protection on the gravel and traction on the smooth rocks is recommended.
@@ -39,13 +40,13 @@ As the mostly sea-level cool air on the west side of the Cascades rises towards 
 *"Windsurfing can be an extreme sport, and Desert Aire can be such a spot."*
 
 *   Unlike Vantage, there is only one launch site.
-*   Being Vantage's “little brother”, the wind at Desert Aire just isn't as strong.
+*   Being Vantage's “little brother”, the wind at Desert Aire just isn't as strong. You can compare instantaneous winds side-by-side from the [Grant County PUD](https://www.grantpud.org/river).
 *   Warning - At Desert Aire, like Vantage, the dominant N-by-NW winds can turn ON on a dime (within 15min), so always be prepared for an early exit should you find yourself on the water with the wrong gear…
 
 ## Water Level
 
-*   Any water level - Unlike Vantage, Desert Aire has a really straightforward launch beach, between the protected boat launch and the swimming area, regardless of the river water levels.
-*   Low water level - Unlike at Vantage, I am not aware of any underwater hazards, so finners and especially foilers should be fine, but always be on the lookout for strange water patterns.
+*   Unlike Vantage, Desert Aire has a really straightforward launch beach, between the protected boat launch and the swimming area, regardless of the river water levels.
+*   Unlike Vantage, which is upstream and always 2°F cooler, finners should be fine, but foilers should steer clear of the boat launch area which has milfoil as the water temperature warms up later in the season.
 Foilers should steer clear of the boat launch area which has milfoil
 *   Grant PUD River Conditions Website: [Grant PUD](https://www.grantpud.org/river)
 
@@ -57,6 +58,5 @@ Foilers should steer clear of the boat launch area which has milfoil
 ![Desert Aire 4](/images/desertaire/PXL_20240701_014104714.jpg)
 ![Desert Aire 5](/images/desertaire/PXL_20240702_000348102.jpg)
 ![Desert Aire 6](/images/desertaire/PXL_20240702_000802035.jpg)
-![Desert Aire 7](/images/desertaire/PXL_20240827_201106218.jpg)
 ![Desert Aire 8](/images/desertaire/PXL_20240827_203506721.jpg)
 ![Desert Aire 9](/images/desertaire/PXL_20240827_232723376.jpg)

@@ -20,6 +20,7 @@ author: Guislain
 -   But at sunset, you get an *encore* with [katabatic winds](https://en.wikipedia.org/wiki/Katabatic_wind)
 -   **NOTE**: *Why are Vantage winds so predictable?* As the mostly sea-level cool air on the west side of the Cascades rises towards Snowqualmie Pass, it cools down, compresses, and drops its moisture. Once it reaches the 3,000ft pass, it enters the Kittitas Valley a typically much warmer 1,500ft high-desert Columbia Plateau shaped like a corridor. As the air warms up, it expands and accelerates down the valley which acts as a funnel towards the Whisky Dick Ridge , where [PSE Wild Horse Wind Farm](https://www.pse.com/en/pages/tours-and-recreation/wild-horse) has 149 wind turbines overlooking the Columbia River at Vantage. From the edge of the canyon, it drops down into the canyon walls in a swooping motion across the Columbia River reaching the Sand Hollow shoreline unobstructed.
 -   **TIPs**:
+    -   Check the [Grant County PUD website](https://www.grantpud.org/river) for conditions.
     -   If the temperature in Ellensburg is 15°F more than Seattle/Kirkland (i.e. around Lake WA), which is pretty common 3 seasons out of the year, then you can be pretty sure that the Kittitas thermals will be **ON**.
     -   The entrance of the (dry) Sand Hollow Campground with its 3 picnic shelters is the best place to rig your gear (on the always empty handicap parking stall to avoid knicking your sail on gravel).
     -   Wearing booties for protection on the gravel and traction on the smooth rocks is highly recommended.
@@ -74,3 +75,4 @@ Grant PUD River Conditions Website: [Grant PUD](https://www.grantpud.org/river)
 ![picnic_table](/images/vantage/picnic_table.jpg)
 ![upriver](/images/vantage/upriver.jpg)
 ![windy](/images/vantage/windy.jpg)
+![image](/images/desertaire/PXL_20240827_201106218.jpg)
