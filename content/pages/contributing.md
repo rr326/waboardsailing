@@ -12,7 +12,7 @@ can put the site together, but I do not have the expertise to build the content.
 That's where the community steps in.
 
 I'd like to have different people "own" different pages. For instance, someone
-could "own" the [Sail Sand Point page](/sites/ssp). They would write
+could "own" the [Sail Sand Point page](/sites/Sail_Sand_Point). They would write
 the content so someone new to sailing or new to Seattle would get a pretty good
 idea of if they should try it, when to go (forecasting), and any tips.
 

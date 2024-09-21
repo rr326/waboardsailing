@@ -6,4 +6,4 @@ Details TBD
 
 # Action Shots
 
-![Matt Krus Newcastle](/images/action/Newcastle_action_matt_krus.jpeg)
+![Matt Krus Newcastle](/images/action/newcastle_action_matt_krus.jpeg)

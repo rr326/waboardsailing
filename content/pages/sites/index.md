@@ -19,7 +19,7 @@ See our [forecast page](/forecast).
 ## Lake Washington
 
 -   [Magnusson Park (mags)](/sites/Magnuson_Park)
--   [Sail Sand Point (ssp)](/sites/Sail_Sand_Poing)
+-   [Sail Sand Point (ssp)](/sites/Sail_Sand_Point)
 -   [Adams Street Boat Ramp](/sites/adams_street)
 -   [Martha Washington Park](/sites/martha_washington_park)
 -   OO Denny

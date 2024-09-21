@@ -3,6 +3,7 @@
 import os
 import shlex
 import shutil
+import time
 
 from invoke.tasks import task
 from pathlib import Path
@@ -99,6 +100,9 @@ def pelican_run(cmd):
     cmd += " " + program.core.remainder  # allows to pass-through args to pelican
     pelican_main(shlex.split(cmd))
 
+@task
+def checklinks(c):
+    c.run("linkchecker --check-extern --config=.linkcheckerrc  https://waboardsailing.org", pty=True)
 
 @task
 def upload(c):
@@ -107,6 +111,11 @@ def upload(c):
     c.run(
         f"aws cloudfront create-invalidation --distribution-id {CONFIG['cloudfront_distribution_id']} --paths '/*'"
     )
+    print("***** BUILT & UPLOADED *****")
+    print("Going to wait for 30 seconds before checking links for cache to be reset.")
+    time.sleep(30)
+    print("Checking links...")
+    checklinks(c)
 
 
 @task

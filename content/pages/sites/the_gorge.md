@@ -61,7 +61,7 @@ to sail The Gorge that are more beginning to intermediate friendly. See below.
 Hood River is the biggest town in the middle of The Gorge, has tons of gear shops,
 restaurants, breweries, hotels, etc. It is also home to some of the best beginner launches.
 
-[Port of Hood River Waterfront](https://portofhoodriver.com/waterfront*recreation/)
+[Port of Hood River Waterfront](https://portofhoodriver.com/waterfront-recreation/)
 
 ![Hood River Waterfront Launches](/images/hood_river_waterfront.jpg)
 
