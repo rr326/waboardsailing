@@ -87,7 +87,7 @@ It's probably best to learn from dedicated Gorge sites but here are two places t
 
 ## Resources
 
--   [The CGWA Guide](https://cgw2.org/local*info/)
+-   [The CGWA Guide](https://cgw2.org/wp-content/uploads/2017/10/VisitorMag_WindSurfing_LowRes.pdf)
 -   [Tourist Guide](https://columbiagorgetomthood.com/windsurfing/)
 
 ## Gear Shops

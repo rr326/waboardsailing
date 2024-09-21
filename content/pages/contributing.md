@@ -92,18 +92,18 @@ TBD
 Unfortunately, this stuff is a bit picky, so do your best but don't sweat
 it.
 
-- `template`
-  - If a launch, set as `site`
-  - Otherwise, **DELETE THE WHOLE LINE**
-- `Title` - This determines the page name
-  - Otherwise, **DELETE THE WHOLE LINE**
-- `lat_lon`
-  - Copy this from Google Maps. Point to the parking lot
-  - The computer will automatically create a Google Map link.
-- `forecast` and `webcam`
-  - If you are technical, you can insert html links to the best
+-   `template`
+    -   If a launch, set as `site`
+    -   Otherwise, **DELETE THE WHOLE LINE**
+-   `Title` - This determines the page name
+    -   Otherwise, **DELETE THE WHOLE LINE**
+-   `lat_lon`
+    -   Copy this from Google Maps. Point to the parking lot
+    -   The computer will automatically create a Google Map link.
+-   `forecast` and `webcam`
+    -   If you are technical, you can insert html links to the best
     forecast pages. Like this:
     `<a href="https://wx.ikitesurf.com/spot/116695" target="_blank">iWindsurf</a>`
-  - If you are not, just paste the links and I'll deal with it.
-- `author_email` - I used my mac to create a 'hide my email' email address, just
+    -   If you are not, just paste the links and I'll deal with it.
+-   `author_email` - I used my mac to create a 'hide my email' email address, just
   in case it gets picked up by spam bots.
