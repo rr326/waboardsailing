@@ -137,8 +137,18 @@ def scale_images(c):
     destination_dir.mkdir(parents=True, exist_ok=True)
     extensions = [".jpeg", ".jpg", ".png", ".ico", ".heic"]
 
+    def already_scaled(souce_path: Path, dest_path: Path) -> bool:
+        return (
+            dest_path.exists()
+            and (dest_path.stat().st_mtime >= souce_path.stat().st_mtime)
+            )
+
     for image_path in source_dir.rglob("*"):
         if image_path.suffix.lower() in extensions:
+            dest_file = destination_dir / image_path.relative_to(source_dir)
+            if already_scaled(image_path, dest_file):
+                print(f"\033[90mSkipping {image_path.name}\033[0m")
+                continue
             with Image.open(image_path) as img:
                 if img.width > 1920:
                     print(f"\033[1m\033[97mScaling {image_path.name}\033[0m")
@@ -146,7 +156,7 @@ def scale_images(c):
                     img = img.resize((1920, new_height), Image.Resampling.LANCZOS)
                 else:
                     print(f"\033[90mCopying {image_path.name}\033[0m")
-                dest_file = destination_dir / image_path.relative_to(source_dir)
+
                 dest_file.parent.mkdir(parents=True, exist_ok=True)
                 img.save(dest_file)
     print()
