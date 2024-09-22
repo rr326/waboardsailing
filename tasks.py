@@ -126,9 +126,8 @@ def upload(c):
 @task
 def format(c):
     c.run("ruff format .")
-    c.run(
-        "markdownlint-cli2 --fix content/**/*.md"
-    )  # npm install markdownlint-cli2 --global
+    c.run("markdownlint-cli2 --fix content/**/*.md")
+    c.run("prettier --write content/**/*.html")  #
 
 
 @task
@@ -167,3 +166,10 @@ def scale_images(c):
                 dest_file.parent.mkdir(parents=True, exist_ok=True)
                 img.save(dest_file)
     print()
+
+
+@task
+def install(c):
+    print("Installs non-python tools globally")
+    c.run("npm install markdownlint-cli2 --global")
+    c.run("npm install prettier prettier-plugin-jinja-template --global")
