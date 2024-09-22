@@ -28,7 +28,7 @@ In a northerly (especially NE), SSP is one of the safest launches around.
 The wind will push you back to shore and the launch area is large and gentle.
 SSP is also home to the [Sail Sand Point](https://www.sailsandpoint.org) boating center. You can rent windsurfers and even take lessons!
 
-<img src="/images/ssp_overview.jpg" class="img-fluid">
+<img src="/images/ssp_overview.jpg" class="img-fluid" alt="SSP Map">
 
 ## Forecasting
 

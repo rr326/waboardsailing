@@ -100,9 +100,14 @@ def pelican_run(cmd):
     cmd += " " + program.core.remainder  # allows to pass-through args to pelican
     pelican_main(shlex.split(cmd))
 
+
 @task
 def checklinks(c):
-    c.run("linkchecker --check-extern --config=.linkcheckerrc  https://waboardsailing.org", pty=True)
+    c.run(
+        "linkchecker --check-extern --config=.linkcheckerrc  https://waboardsailing.org",
+        pty=True,
+    )
+
 
 @task
 def upload(c):
@@ -121,6 +126,9 @@ def upload(c):
 @task
 def format(c):
     c.run("ruff format .")
+    c.run(
+        "markdownlint-cli2 --fix content/**/*.md"
+    )  # npm install markdownlint-cli2 --global
 
 
 @task
@@ -138,10 +146,9 @@ def scale_images(c):
     extensions = [".jpeg", ".jpg", ".png", ".ico", ".heic"]
 
     def already_scaled(souce_path: Path, dest_path: Path) -> bool:
-        return (
-            dest_path.exists()
-            and (dest_path.stat().st_mtime >= souce_path.stat().st_mtime)
-            )
+        return dest_path.exists() and (
+            dest_path.stat().st_mtime >= souce_path.stat().st_mtime
+        )
 
     for image_path in source_dir.rglob("*"):
         if image_path.suffix.lower() in extensions:

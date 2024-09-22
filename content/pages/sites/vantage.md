@@ -14,7 +14,7 @@ post_author_email: <gb2clagron@gmail.com>
 
 ![calm](/images/vantage/calm.jpg)
 
-##### **PROs**: "*If there is wind you can always windsurf at Vantage, regardless of the wind direction.*"
+## **PROs**: "*If there is wind you can always windsurf at Vantage, regardless of the wind direction.*"
 
 -   Vantage has the unique characteristic to have **3 launch sites** literally within **7 min** of each other, each best suited for different wind directions.
 -   When **ON**, the dominant **W-by-NW thermals** are very predictable, starting **from ~1p** and steadily *increasing* **until 5p** when they can be quite *strong*, before they start to drop before sunset.
@@ -31,7 +31,7 @@ post_author_email: <gb2clagron@gmail.com>
         -   [Ellensburg iWindsurf](https://wx.iwindsurf.com/spot/1012) sensor, and scroll down to the Wind Statistics for seasonal wind patterns,
         -   [Ryegrass Summit iWindsurf](https://wx.iwindsurf.com/spot/11451) sensor, which is on the Whisky Dick Ridge, and scroll down to the Wind Statistics for seasonal winds patterns.
 
-##### **CONs/Caution**: *"Windsurfing can be an extreme sport, and Vantage can be such a spot."*
+## **CONs/Caution**: *"Windsurfing can be an extreme sport, and Vantage can be such a spot."*
 
 -   **WARNING**: Vantage is *not a recommended* windsurfing spot for *beginners*. Always have an exit plan, should you get overpowered, break gear or injure yourself.
 -   The **Sand Hollow** launch site, is very good when the dominant **W by NW thermals** are blowing, but it can **get choppy** quickly as the onshore thermals race across the river, and it is not unusual to see whitecaps develop on the eastern half of the Columbia, while none appear on the western half, because that half still is in the wind shadow of the canyon, and the chop has not had time to develop yet. Furthermore, where there are cliffs, the chop will bounce back On such days, driving over the I90 bridge back & forth is a good idea in order to have a birdeye view of the unique local sailing conditions.
