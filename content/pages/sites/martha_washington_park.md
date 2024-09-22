@@ -7,8 +7,7 @@ level: beginner
 fee: Free
 parking: Ample
 launch: All grass rigging.
-author: Ross Rosen
-author_email: <cab_mall0n@icloud.com>
+post_author: Matt Krus
 
 # Martha Washington Park
 

@@ -22,7 +22,18 @@ area labeled "Advanced Topics". Even there, try not to be too controversial.
 If there is significant disagreement between experts, refer to it in the
 "NW-Windtalk Threads" section.
 
-## Where to Send Files
+## TLDR
+
+Want to help with content but have little tolerance for tech stuff? Fine -
+just <a href="mailto:cab_mall0n@icloud.com" >email me.</a>
+
+Don't mind putting in a bit more effort to help me out? Read below.
+
+<hr>
+
+## For The More Motivated
+
+### Where to Send Files
 
 The easiest for me is if you drop them directly in my
 [Dropbox Folder](https://www.dropbox.com/request/1VXxCyjf1txdRb2PPV9V).
@@ -31,7 +42,7 @@ Just click that link and you can drop files there.
 Or you can <a href="mailto:cab_mall0n@icloud.com" >email me.</a>. But if
 you have big files (like photos), please use the above Dropbox link.
 
-## Technical Expertise
+### Technical Expertise
 
 This site is written in a modified version of ["Markdown"](https://www.markdownguide.org/getting-started/).
 It would be much easier for me if all contributors would spend a little time and learn Markdown.
@@ -41,13 +52,13 @@ But you don't have to. If you send me a plain text file, I will manually import 
 
 If you are a developer you are welcome to submit PRs: [github](https://github.com/rr326/waboardsailing).
 
-## How To
+### How To
 
 This website uses a website builder call [Pelican](https://getpelican.com). It uses
 Markdown, with some "metadata" at the top, and with a custom theme that I built.
 Below is an example of the Markdown for the Magnusson page.
 
-```
+```markdown
 template: site
 Title: Mags
 lat_lon: 47.675585, -122.251607
@@ -60,8 +71,8 @@ launch: Open grassy area followed by a small drop and rocky beach. Wind shadow w
 foiling: Good for foiling. No major hidden obstacles.
 forecast: <a href="https://wx.ikitesurf.com/spot/116695" target="_blank">iWindsurf</a>
 webcam:
-author: Ross Rosen
-author_email: cab_mall0n@icloud.com
+post_author: Ross Rosen
+post_author_email: cab_mall0n@icloud.com
 
 # Magnusson Park
 *(aka: Mags, Maggie )*
@@ -87,7 +98,7 @@ TBD
 
 ```
 
-### Metadata
+#### Metadata
 
 Unfortunately, this stuff is a bit picky, so do your best but don't sweat
 it.

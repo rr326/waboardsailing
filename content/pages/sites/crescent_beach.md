@@ -7,8 +7,8 @@ best_wind: NW
 level: beginner
 fee: "Small (day use) Fee" from [Crescent Beach RV Park & Campground](https://www.crescentbeachrv.com/) to launch from private beach, free if launching from public beach; refer to Launch"
 launch: Either **West** of Salt Creek (best) from [Crescent Beach RV Park & Campground](https://www.crescentbeachrv.com/), or **East** of Salt Creek (fair) from [Salt Creek Beach Parking Lot](https://goo.gl/maps/LtfWB4RZFD8CFaLB9); refer to important notes below.
-author: Guislain
-author_email: <gb2clagron@gmail.com>
+post_author: Guislain
+post_author_email: <gb2clagron@gmail.com>
 
 # Crescent Beach
 

@@ -81,10 +81,14 @@
               <td>{{page.webcam | markdown}}</td>
             </tr>
             {% endif %}
-            {% if page.author | string | length > 0 %}
+            {% if page.post_author | string | length > 0 %}
             <tr>
               <th>Author</th>
-              <td><a href="mailto:{{page.author_email}}">{{page.author}}</a></td>
+              {% if page.post_author_email | string | length > 0 %}
+                <td><a href="mailto:{{page.post_author_email}}">{{page.post_author}}</a></td>
+              {% else %}
+                <td>{{page.post_author}}</td>
+              {% endif %}
             </tr>
             {% endif %}
           </tbody>

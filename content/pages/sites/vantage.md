@@ -7,7 +7,8 @@ level: intermediate
 fee: \#1 **Free** for [Sand Hollow Campground](https://www.grantpud.org/templates/galaxy/images/images/Downloads/Recreation/SandHollowCampSitemapForWeb.png), #2 **Discovery Pass** required for [Wanapum State Park](https://beautifulwashington.com/eastern-washington/attractions/columbia-plateau-area-2/415-wanapum-campground.html) | #3 **Free** for [Vantage Boat Launch](https://509river.org/boat-launch/vantage-boat-launch/)
 launch: **3 sites**: \#1 [Sand Hollow (dry) Campground](https://www.google.com/maps/place/Sand+Hollow+Campground/@46.9219958,-119.9559509,17z/data=!3m1!4b1!4m9!3m8!1s0x5499a240facb4317:0x10b510f26daecfab!5m2!4m1!1i2!8m2!3d46.9219958!4d-119.9537622!16s%2Fg%2F11bzq36tc7), \#2 [Wanapum State Park, South parking](https://www.google.com/maps/dir//Vantage,+Washington+98950/@46.9019355,-119.9941143,16.22z/data=!4m9!4m8!1m0!1m5!1m1!1s0x5499a2e6d04187ff:0x72444b59a3eadbe4!2m2!1d-119.98956!2d46.9010859!3e0), \#3 [Vantage Boat Launch](https://www.google.com/maps/place/Vantage+Boat+Launch/@46.9411357,-119.9868578,17z/data=!3m1!4b1!4m6!3m5!1s0x5499989cd8233613:0xe88055a9248273bb!8m2!3d46.9411357!4d-119.9846691!16s%2Fg%2F11f01chd7w)
 webcam: **2 I90** cams, [I90 East](https://wsdot.com/travel/real-time/map/?featuretype=camera&featureid=9686), [I90 West](https://wsdot.com/travel/real-time/map/?featuretype=camera&featureid=1107)
-author: Guislain
+post_author: Guislain
+post_author_email: <gb2clagron@gmail.com>
 
 # Vantage
 

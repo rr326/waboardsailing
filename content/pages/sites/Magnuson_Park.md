@@ -10,8 +10,8 @@ launch: Open grassy area followed by a small drop and rocky beach. Wind shadow w
 foiling: Good for foiling.
 forecast: HRRR model (WRF is bad for southerlies)
 webcam: (none)
-author: Ross Rosen
-author_email: <cab_mall0n@icloud.com>
+post_author: Ross Rosen
+post_author_email: <cab_mall0n@icloud.com>
 
 # Magnusson Park
 

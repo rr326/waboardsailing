@@ -5,8 +5,8 @@ region: Columbia Plateau
 best_wind: Sideshore W-by-NW
 level: beginner
 fee: Free for [Priest Rapids Recreation Area](https://maps.google.com/?cid=16562151886467720909&entry=gps&g_st=ac)
-author: Guislain
-author_email: <gb2clagron@gmail.com>
+post_author: Guislain
+post_author_email: <gb2clagron@gmail.com>
 
 # Desert Aire
 
