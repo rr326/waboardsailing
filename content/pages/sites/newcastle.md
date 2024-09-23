@@ -12,25 +12,24 @@ foiling: ??
 
 # Newcastle Beach Park
 
-<img alt="OO Denny Park" src="/images/newcastle.png" style="height: 640px;">
-
 [Newcastle Beach Park Website](https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/newcastle-beach-park)
 
 ## Overview
 
 <h2 style="background-color: #FFFF00;">DRAFT - Not verified by experts. </h2>
-TBD
+
+<img alt="OO Denny Park" src="/images/newcastle_launch.jpg" style="height: 640px;">
+<img alt="OO Denny Park" src="/images/newcastle_wind.png" style="height: 640px;">
 
 ## Wind Conditions
 
--   **Best Wind Directions**: Newcastle is ideal for southerly winds, which provide steady conditions suitable for both beginners and experienced sailors. It is resilient to convergence, making it a reliable spot for south winds.
+-   **Best Wind Directions**: Newcastle is ideal for southerly winds, which provide steady conditions suitable for both beginners and experienced sailors. It is resilient to convergence, making it a reliable spot for south winds. The wind  seems to amplify as it is compressed through the corridor there, so it may be slightly windier there.
 -   **Worst Wind Directions**: Winds with a west component can be gusty and inconsistent, earning Newcastle the nickname "Gust Kastle." SE winds are also not favorable.
 -   **Gustiness**: Newcastle can be quite gusty, especially with a west wind component. The wind can be inconsistent, so using a floaty board and a relatively large sail is recommended.
 
 ## Beginners
 
--   Newcastle is  a good spot for beginners due to its large shallow area with a sandy bottom.
--   ?? It looks like there is plenty of room to drift south and walk back, on a northerly.
+-   Newcastle is  a good spot for beginners due to the shallow area that goes for almost 75-100 yards.
 
 ## Facilities
 
