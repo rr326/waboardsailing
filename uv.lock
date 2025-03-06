@@ -429,7 +429,7 @@ wheels = [
 [[package]]
 name = "waboardsailing"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "linkchecker" },
     { name = "pillow" },
@@ -447,7 +447,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "linkchecker" },
+    { name = "linkchecker", specifier = ">=10.5.0" },
     { name = "pillow", specifier = ">=10.4.0" },
 ]
 
